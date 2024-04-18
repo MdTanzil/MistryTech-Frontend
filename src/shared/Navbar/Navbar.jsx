@@ -338,7 +338,7 @@ const NavBar = () => {
               to="/swimming-pool"
               className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
-              Industrial Furniture
+              Garments Furniture
             </NavLink>
             {swimmingPoolDropDown && (
               <div
@@ -386,7 +386,7 @@ const NavBar = () => {
               to="/healthcare"
               className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
-              Shop by Room
+              School Furniture
             </NavLink>
             {healthcareDropDown && (
               <div
