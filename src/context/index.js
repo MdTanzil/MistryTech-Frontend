@@ -1,5 +1,7 @@
 import { createContext } from "react";
 
-const SearchContext = createContext('')
+const SearchContext = createContext("");
 
-export {SearchContext}
+const AuthContext = createContext("");
+
+export { AuthContext, SearchContext };
