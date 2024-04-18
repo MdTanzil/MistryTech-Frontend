@@ -3,47 +3,54 @@ import { Link } from "react-router-dom";
 import { AiOutlineShopping } from "react-icons/ai";
 import { useContext, useEffect, useRef } from "react";
 import { SearchContext } from "../../context";
+import Logo from "../../assets/images/Mistrytech furniture logo svg.svg";
 const UpperNavbar = () => {
-  const {isSearch,
-    setIsSearch} = useContext(SearchContext)
-    const inputRef = useRef(null);
+  const { isSearch, setIsSearch } = useContext(SearchContext);
+  const inputRef = useRef(null);
 
-    useEffect(() => {
-      if (isSearch) {
-        // Focus the input element when isSearch is true
-        inputRef.current.focus();
-      }
-    }, [isSearch]);
+  useEffect(() => {
+    if (isSearch) {
+      // Focus the input element when isSearch is true
+      inputRef.current.focus();
+    }
+  }, [isSearch]);
 
-    const searchContent = <div className="absolute min-w-full   bg-white z-10">
-    <div    className="flex justify-between items-center h-28 ">
-      <div>Logo</div>
-      <div>  <input
+  const searchContent = (
+    <div className="absolute min-w-full bg-white z-10  px-12">
+      <div className="flex justify-between items-center h-28 ">
+        <div>
+          <img src={Logo} alt="" className="h-[56px]" />
+        </div>
+        <div>
+          {" "}
+          <input
+            className="rounded-lg border border-[#eef130] bg-transparent px-4 py-2 text-[#1B8EF8] focus:outline-none w-96"
             type="text"
             placeholder="Search"
-            className="input input-bordered w-36 md:w-auto pr-10"
-           ref={inputRef}
-            onBlur={()=> setIsSearch(false)}
-          /></div>
-      <div>          
-        <div className="flex items-center justify-between gap-5">
-          <Link className=" px-2 py-2 text-lg text-black  ">
-            <FaRegUser />
-          </Link>
-          <Link className=" px-2 py-2 text-2xl text-black  ">
-            <AiOutlineShopping />
-          </Link>
+            ref={inputRef}
+            onBlur={() => setIsSearch(false)}
+          />
         </div>
+        <div>
+          <div className="flex items-center justify-between gap-5">
+            <Link className=" px-2 py-2 text-lg text-black  ">
+              <FaRegUser />
+            </Link>
+            <Link className=" px-2 py-2 text-2xl text-black  ">
+              <AiOutlineShopping />
+            </Link>
+          </div>
         </div>
-    </div>
       </div>
+    </div>
+  );
 
   return (
     <>
       {isSearch && searchContent}
-      <nav className="flex items-center justify-between bg-white px-4 py-2 ">
+      <nav className="container mx-auto flex items-center justify-between bg-white px-4 py-2 ">
         <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold transition-all duration-200 hover:scale-110">
-          <h2 className="text-black font-bold">Logo.....</h2>
+          <img src={Logo} alt="" className="  h-[56px] " />
         </div>
         <div className="flex items-center justify-between gap-16">
           <div className="form-control relative">
@@ -51,8 +58,7 @@ const UpperNavbar = () => {
               type="text"
               placeholder="Search"
               className="input input-bordered w-24 md:w-auto pr-10"
-              onFocus={()=> setIsSearch(true)}
-             
+              onFocus={() => setIsSearch(true)}
             />
             <button className="btn btn-ghost btn-circle absolute right-0 top-0 bottom-0 m-auto">
               <svg

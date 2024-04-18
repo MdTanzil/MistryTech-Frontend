@@ -11,7 +11,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex flex-col lg:flex-row items-center justify-center bg-yellow-500 ">
+    <nav className="flex flex-col lg:flex-row items-center justify-center bg-primary ">
       <div className="flex items-center justify-between px-4 py-2 lg:p-0">
         <button
           className="block lg:hidden  items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
@@ -44,226 +44,226 @@ const NavBar = () => {
         }`}
       >
         <div className="text-sm lg:flex-growflex flex-col lg:flex-row">
-        <div className="relative inline-block">
-  <NavLink
-    onMouseEnter={() => setHomeFurnitureDropdown(true)}
-    onMouseLeave={() => setHomeFurnitureDropdown(false)}
-    to="/"
-    className="block mt-4 lg:inline-block lg:mt-0 text-white p-2 text-base hover:bg-white hover:text-gray-900 mr-4"
-  >
-    Home Furniture
-  </NavLink>
-  {homeFurnitureDropdown && (
-    <div
-    onMouseEnter={() => setHomeFurnitureDropdown(true)}
-    onMouseLeave={() => setHomeFurnitureDropdown(false)}
-      className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-full lg:w-[1400px] justify-center top-full left-[-220px]"
-    >
-      <div className="container mx-auto px-4 lg:px-0">
-        <div className="grid grid-cols-6 gap-4">
-          <div>
+          <div className="relative inline-block">
             <NavLink
-              to="/home-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+              onMouseEnter={() => setHomeFurnitureDropdown(true)}
+              onMouseLeave={() => setHomeFurnitureDropdown(false)}
+              to="/"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white p-2 text-base hover:bg-white hover:text-gray-900 mr-4"
             >
-              Home Interior
+              Home Furniture
             </NavLink>
-            <NavLink
-              to="/villa-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Villa Interior
-            </NavLink>
-            <NavLink
-              to="/duplex-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Duplex House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
-            <NavLink
-              to="/luxury-pent-house"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Luxury House
-            </NavLink>
+            {homeFurnitureDropdown && (
+              <div
+                onMouseEnter={() => setHomeFurnitureDropdown(true)}
+                onMouseLeave={() => setHomeFurnitureDropdown(false)}
+                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-full lg:w-[1400px] justify-center top-full left-[-220px]"
+              >
+                <div className="container mx-auto px-4 lg:px-0">
+                  <div className="grid grid-cols-6 gap-4">
+                    <div>
+                      <NavLink
+                        to="/home-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Home Interior
+                      </NavLink>
+                      <NavLink
+                        to="/villa-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Villa Interior
+                      </NavLink>
+                      <NavLink
+                        to="/duplex-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Duplex House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                      <NavLink
+                        to="/luxury-pent-house"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Luxury House
+                      </NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        to="/home-renovation"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Home Renovation
+                      </NavLink>
+                      <NavLink
+                        to="/apartments"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Apartment
+                      </NavLink>
+                      <NavLink
+                        to="/loft-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Loft Interior
+                      </NavLink>
+                      <NavLink
+                        to="/islamic-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Islamic Interior
+                      </NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        to="/home-renovation"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Home Renovation
+                      </NavLink>
+                      <NavLink
+                        to="/apartments"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Apartment
+                      </NavLink>
+                      <NavLink
+                        to="/loft-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Loft Interior
+                      </NavLink>
+                      <NavLink
+                        to="/islamic-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Islamic Interior
+                      </NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        to="/home-renovation"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Home Renovation
+                      </NavLink>
+                      <NavLink
+                        to="/apartments"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Apartment
+                      </NavLink>
+                      <NavLink
+                        to="/loft-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Loft Interior
+                      </NavLink>
+                      <NavLink
+                        to="/islamic-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Islamic Interior
+                      </NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        to="/home-renovation"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Home Renovation
+                      </NavLink>
+                      <NavLink
+                        to="/apartments"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Apartment
+                      </NavLink>
+                      <NavLink
+                        to="/loft-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Loft Interior
+                      </NavLink>
+                      <NavLink
+                        to="/islamic-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Islamic Interior
+                      </NavLink>
+                    </div>
+                    <div>
+                      <NavLink
+                        to="/home-renovation"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Home Renovation
+                      </NavLink>
+                      <NavLink
+                        to="/apartments"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Apartment
+                      </NavLink>
+                      <NavLink
+                        to="/loft-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Loft Interior
+                      </NavLink>
+                      <NavLink
+                        to="/islamic-interior"
+                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      >
+                        Islamic Interior
+                      </NavLink>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-          <div>
-            <NavLink
-              to="/home-renovation"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Home Renovation
-            </NavLink>
-            <NavLink
-              to="/apartments"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Apartment
-            </NavLink>
-            <NavLink
-              to="/loft-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Loft Interior
-            </NavLink>
-            <NavLink
-              to="/islamic-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Islamic Interior
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/home-renovation"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Home Renovation
-            </NavLink>
-            <NavLink
-              to="/apartments"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Apartment
-            </NavLink>
-            <NavLink
-              to="/loft-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Loft Interior
-            </NavLink>
-            <NavLink
-              to="/islamic-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Islamic Interior
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/home-renovation"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Home Renovation
-            </NavLink>
-            <NavLink
-              to="/apartments"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Apartment
-            </NavLink>
-            <NavLink
-              to="/loft-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Loft Interior
-            </NavLink>
-            <NavLink
-              to="/islamic-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Islamic Interior
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/home-renovation"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Home Renovation
-            </NavLink>
-            <NavLink
-              to="/apartments"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Apartment
-            </NavLink>
-            <NavLink
-              to="/loft-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Loft Interior
-            </NavLink>
-            <NavLink
-              to="/islamic-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Islamic Interior
-            </NavLink>
-          </div>
-          <div>
-            <NavLink
-              to="/home-renovation"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Home Renovation
-            </NavLink>
-            <NavLink
-              to="/apartments"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Apartment
-            </NavLink>
-            <NavLink
-              to="/loft-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Loft Interior
-            </NavLink>
-            <NavLink
-              to="/islamic-interior"
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-            >
-              Islamic Interior
-            </NavLink>
-          </div>
-        </div>
-      </div>
-    </div>
-  )}
-</div>
 
           <div className="relative inline">
             <NavLink
@@ -451,10 +451,9 @@ const NavBar = () => {
               </div>
             )}
           </div>
-          
+
           <div className="relative inline">
             <NavLink
-              
               to=""
               className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
@@ -463,7 +462,6 @@ const NavBar = () => {
           </div>
           <div className="relative inline">
             <NavLink
-              
               to=""
               className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
@@ -472,7 +470,6 @@ const NavBar = () => {
           </div>
           <div className="relative inline">
             <NavLink
-              
               to="/blog"
               className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
