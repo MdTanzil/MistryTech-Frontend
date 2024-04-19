@@ -65,9 +65,9 @@ const UpperNavbar = () => {
     <>
       {isSearch && searchContent}
       <nav className="container mx-auto flex items-center justify-between bg-white px-4 py-2 ">
-        <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold transition-all duration-200 hover:scale-110">
+        <Link to={'/'} className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold transition-all duration-200 hover:scale-110">
           <img src={Logo} alt="" className="  h-[56px] " />
-        </div>
+        </Link>
         <div className="flex items-center justify-between gap-16">
           <div className="form-control relative">
             <input
@@ -108,7 +108,7 @@ const UpperNavbar = () => {
             </li>
           </ul>
           <div className="flex items-center justify-between gap-5">
-            <Link className=" px-2 py-2 text-lg text-black  ">
+            <Link to={'/login'} className=" px-2 py-2 text-lg text-black  ">
               <FaRegUser />
             </Link>
             <Link className=" px-2 py-2 text-2xl text-black  ">
