@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Login from "../Page/Login";
+import Collections from "../Page/collections/Collections";
 import Home from "../componentes/Home/Home/Home";
 import Main from "../layout/Main";
 import AuthProvider from "../provider/AuthProvider";
-import Collections from "../Page/collections/Collections";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/collections",
+        element: <Collections></Collections>,
       },
     ],
   },
@@ -24,10 +28,6 @@ const router = createBrowserRouter([
         <Login />
       </AuthProvider>
     ),
-  },
-  {
-    path: "/collection",
-    element: <Collections></Collections>,
   },
 ]);
 export default router;
