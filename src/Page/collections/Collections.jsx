@@ -157,6 +157,44 @@ const Collections = () => {
             </p>
           </div>
         </div>
+        <div className="card w-80 rounded-none relative">
+          <img
+            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+            alt="Shoes"
+            className="h-72"
+          />
+          <div className="absolute inset-0 flex items-center justify-center text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+            <button className="cursor-pointer bg-white text-black hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
+              Select Option
+            </button>
+          </div>
+          <div className=" text-center">
+            <h2 className="text-xl"> Easy Table | TV2-005</h2>
+            <p>
+              From tk 6,990.00{" "}
+              <span className="line-through text-slate-400">TK 7,500.00</span>
+            </p>
+          </div>
+        </div>
+        <div className="card w-80 rounded-none relative">
+          <img
+            src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+            alt="Shoes"
+            className="h-72"
+          />
+          <div className="absolute inset-0 flex items-center justify-center text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+            <button className="cursor-pointer bg-white text-black hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
+              Select Option
+            </button>
+          </div>
+          <div className=" text-center">
+            <h2 className="text-xl"> Easy Table | TV2-005</h2>
+            <p>
+              From tk 6,990.00{" "}
+              <span className="line-through text-slate-400">TK 7,500.00</span>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
