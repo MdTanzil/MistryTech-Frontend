@@ -6,11 +6,7 @@ import Home from "../componentes/Home/Home/Home";
 import Admin from "../layout/Admin";
 import Main from "../layout/Main";
 import AuthProvider from "../provider/AuthProvider";
-<<<<<<< HEAD
-import Collections from "../Page/collections/Collections";
 import ProductDetails from "../Page/ProductDetails/ProductDetails";
-=======
->>>>>>> a5d99eb47cad710d67a7782b903e462db8182358
 
 const router = createBrowserRouter([
   {

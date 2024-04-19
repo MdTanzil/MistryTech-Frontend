@@ -1,6 +1,29 @@
+import { useState } from "react";
 import Img from "../../assets/images/collections-hero.jpg";
 
 const ProductDetails = () => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleIncreaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const handleDecreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
+
+  const handleAddToCart = () => {
+    // Implement logic to add the product to the cart
+    console.log("Product added to cart");
+  };
+
+  const handleBuyNow = () => {
+    // Implement logic to proceed to checkout
+    console.log("Proceeding to checkout");
+  };
+
   return (
     <div>
       <div className="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -45,12 +68,41 @@ const ProductDetails = () => {
           </div>
           <p className="mb-4 mt-4">Payment:</p>
           <a className="mb-5 font-medium" href="">
-            01799000000
+            Bkash : 01799000000
           </a>
           <p className="mb-4 mt-4 font-medium">
             Buy now, pay later! Flexible Monthly Payments up to 12 Months with
             Credit Card
           </p>
+          <div className="flex items-center mt-6">
+            <button
+              onClick={handleDecreaseQuantity}
+              className="border border-gray-300 px-3 py-1 rounded-md"
+            >
+              -
+            </button>
+            <span className="mx-4">{quantity}</span>
+            <button
+              onClick={handleIncreaseQuantity}
+              className="border border-gray-300 px-3 py-1 rounded-md"
+            >
+              +
+            </button>
+          </div>
+          <div className="gap-4 mt-3">
+            <button
+              onClick={handleAddToCart}
+              className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md shadow-md"
+            >
+              Add to Cart
+            </button>
+            <button
+              onClick={handleBuyNow}
+              className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md shadow-md ml-4"
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
