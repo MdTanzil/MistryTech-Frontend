@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { NavLink } from "react-router-dom";
-
 const NavBar = () => {
   //   const [homeDropdown, setHomeDropDown] = useState(false);
   const [homeFurnitureDropdown, setHomeFurnitureDropdown] = useState(false);
@@ -49,9 +49,16 @@ const NavBar = () => {
               onMouseEnter={() => setHomeFurnitureDropdown(true)}
               onMouseLeave={() => setHomeFurnitureDropdown(false)}
               to="/"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white p-2 text-base hover:bg-white hover:text-gray-900 mr-4"
+              className=" block mt-4 lg:inline-block lg:mt-0 text-white p-2 text-base hover:bg-white hover:text-gray-900 mr-4"
             >
-              Home Furniture
+              <div className="flex items-center gap-1">
+                Home Furniture{" "}
+                {homeFurnitureDropdown ? (
+                  <MdKeyboardArrowDown />
+                ) : (
+                  <MdKeyboardArrowUp />
+                )}
+              </div>
             </NavLink>
             {homeFurnitureDropdown && (
               <div

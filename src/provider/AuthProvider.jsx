@@ -13,25 +13,25 @@ import { AuthContext } from "../context";
 import { auth } from "../firebase";
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState("tanzil");
   const [loading, setLoading] = useState(true);
 
   // Account registrations Function
   const register = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed up
-        const user = userCredential.user;
-        setUser(user);
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+    return createUserWithEmailAndPassword(auth, email, password);
+    // .then((userCredential) => {
+    //   // Signed up
+    //   const user = userCredential.user;
+    //   setUser(user);
+    //   // ...
+    // })
+    // .catch((error) => {
+    //   const errorCode = error.code;
+    //   const errorMessage = error.message;
 
-        console.error(errorMessage, errorCode);
-        // ..
-      });
+    //   console.error(errorMessage, errorCode);
+    //   // ..
+    // });
   };
   const googleProvider = new GoogleAuthProvider();
 
@@ -99,6 +99,8 @@ const AuthProvider = ({ children }) => {
     logout,
     login,
     updateUserName,
+    loading,
+    setLoading,
   };
 
   if (loading) {

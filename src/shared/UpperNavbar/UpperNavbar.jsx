@@ -1,12 +1,14 @@
+import { useContext, useEffect, useRef } from "react";
+import { AiOutlineShopping } from "react-icons/ai";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { AiOutlineShopping } from "react-icons/ai";
-import { useContext, useEffect, useRef } from "react";
-import { SearchContext } from "../../context";
 import Logo from "../../assets/images/Mistrytech furniture logo svg.svg";
+import { AuthContext, SearchContext } from "../../context";
+import AvatarDropDown from "../../profile/AvarterDropDown";
 const UpperNavbar = () => {
   const { isSearch, setIsSearch } = useContext(SearchContext);
   const inputRef = useRef(null);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     if (isSearch) {
@@ -24,7 +26,7 @@ const UpperNavbar = () => {
         <div className="form-control relative flex items-center justify-between gap-16">
           {" "}
           <input
-            className="rounded-lg border border-[#eef130] bg-transparent px-4 py-2 text-[#1B8EF8] focus:outline-none w-[570px]"
+            className="rounded-lg border border-secondary bg-transparent px-4 py-2  focus:outline-none w-[570px]"
             type="text"
             placeholder="Search Product"
             ref={inputRef}
@@ -65,7 +67,10 @@ const UpperNavbar = () => {
     <>
       {isSearch && searchContent}
       <nav className="container mx-auto flex items-center justify-between bg-white px-4 py-2 ">
-        <Link to={'/'} className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold transition-all duration-200 hover:scale-110">
+        <Link
+          to={"/"}
+          className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold transition-all duration-200 hover:scale-110"
+        >
           <img src={Logo} alt="" className="  h-[56px] " />
         </Link>
         <div className="flex items-center justify-between gap-16">
@@ -96,21 +101,26 @@ const UpperNavbar = () => {
           <ul className="flex items-center justify-between gap-10 text-black">
             <li className="group flex  cursor-pointer flex-col">
               Help Center{" "}
-              <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="group flex  cursor-pointer flex-col">
               Contact Us{" "}
-              <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
             </li>
             <li className="group flex  cursor-pointer flex-col">
               Meeting Request{" "}
-              <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
             </li>
           </ul>
           <div className="flex items-center justify-between gap-5">
-            <Link to={'/login'} className=" px-2 py-2 text-lg text-black  ">
-              <FaRegUser />
-            </Link>
+            {!user ? (
+              <Link to={"/login"} className=" px-2 py-2 text-lg text-black  ">
+                <FaRegUser />
+              </Link>
+            ) : (
+              <AvatarDropDown />
+            )}
+
             <Link className=" px-2 py-2 text-2xl text-black  ">
               <AiOutlineShopping />
             </Link>

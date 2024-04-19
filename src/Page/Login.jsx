@@ -1,9 +1,13 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { useForm } from "react-hook-form";
+import { Toaster, toast } from "react-hot-toast";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Photo from "../assets/images/ceo-desk.jpeg";
+import { AuthContext } from "../context";
 const Login = () => {
   return (
     <div className="min-h-screen flex justify-center items-center">
+      <Toaster />
       <Form />;
     </div>
   );
@@ -13,6 +17,88 @@ export default Login;
 
 export const Form = () => {
   const [register, setRegister] = useState(false);
+  const { register: reg, handleSubmit } = useForm();
+
+  const {
+    user,
+    setUser,
+    register: registrationFunction,
+    signInWithGoogle,
+    logout,
+    login,
+    updateUserName,
+    setLoading,
+  } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // On registration
+  const onSubmitRegister = (data) => {
+    console.log("register Data", data);
+    registrationFunction(data.remail, data.rpassword)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        setUser(user);
+        console.log("Registration successfully");
+        if (data.name) {
+          updateUserName(data.name);
+        }
+        setLoading(false);
+        toast.success("Successfully Register");
+        navigate(location?.state ? location.state : "/");
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(errorMessage, errorCode);
+      });
+  };
+
+  //On Login
+  const onSubmitLogin = (data) => {
+    console.log("login data", data);
+    login(data.email, data.password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        setUser(user);
+        console.log("login successfully");
+        navigate(location?.state ? location.state : "/");
+        toast.success("Successfully Login");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(errorMessage, errorCode);
+      });
+  };
+
+  // handle Google Login
+  const handleGoogleLogin = () => {
+    signInWithGoogle()
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        setUser(user);
+        console.log("Registration successfully");
+
+        setLoading(false);
+        toast.success("Successfully login");
+        navigate(location?.state ? location.state : "/");
+
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(errorMessage, errorCode);
+      });
+  };
   return (
     <div className="w-80 md:w-96 lg:w-[800px] mx-auto bg-white flex items-center relative overflow-hidden shadow-xl">
       {/* register form  */}
@@ -20,6 +106,7 @@ export const Form = () => {
         className={`p-8 w-full ${
           register ? "lg:translate-x-0" : "lg:-translate-x-full hidden lg:block"
         } duration-500`}
+        onSubmit={handleSubmit(onSubmitRegister)}
       >
         <h1 className="backdrop-blur-sm text-2xl lg:text-4xl pb-4 font-semibold">
           Register
@@ -33,30 +120,34 @@ export const Form = () => {
             type="name"
             placeholder="John Doe"
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
+            {...reg("name")}
           />
           <label htmlFor="u_email" className="block">
             Email
           </label>
           <input
-            id="u_email"
-            type="u_email"
+            id="email"
+            type="email"
             placeholder="example@example.com"
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
+            name="email"
+            {...reg("remail")}
           />
           <label htmlFor="u_password" className="block">
             Password
           </label>
           <input
-            id="u_password"
-            type="u_password"
+            id="password"
+            type="password"
             placeholder=".............."
             min={5}
+            {...reg("rpassword")}
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
           />
         </div>
         {/* button type will be submit for handling form submission*/}
         <button
-          type="button"
+          type="submit"
           className="py-2 px-5 mb-4 mx-auto mt-8 shadow-lg border rounded-md border-black block"
         >
           Submit
@@ -76,6 +167,7 @@ export const Form = () => {
         <button
           type="button"
           className="py-2 px-5 mb-4 mt-8 mx-auto block shadow-lg border rounded-md border-black"
+          onClick={() => handleGoogleLogin()}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +198,7 @@ export const Form = () => {
         className={`p-8 w-full mr-0 ml-auto duration-500 ${
           register ? "lg:translate-x-full hidden lg:block" : ""
         }`}
+        onSubmit={handleSubmit(onSubmitLogin)}
       >
         <h1 className="backdrop-blur-sm text-2xl lg:text-4xl pb-4 font-semibold">
           Login
@@ -119,6 +212,7 @@ export const Form = () => {
             type="email"
             placeholder="example@example.com"
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
+            {...reg("email")}
           />
           <label htmlFor="_password" className="block">
             Password
@@ -129,11 +223,12 @@ export const Form = () => {
             placeholder=".............."
             min={5}
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
+            {...reg("password")}
           />
         </div>
         {/* button type will be submit for handling form submission*/}
         <button
-          type="button"
+          type="submit"
           className="py-2 px-5 mb-4 mx-auto mt-8 shadow-lg border rounded-md border-black block"
         >
           Submit
@@ -153,6 +248,7 @@ export const Form = () => {
         <button
           type="button"
           className="py-2 px-5 mb-4 mt-8 mx-auto block shadow-lg border rounded-md border-black"
+          onClick={() => handleGoogleLogin()}
         >
           <svg
             viewBox="-0.5 0 48 48"
