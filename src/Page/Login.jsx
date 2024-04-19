@@ -1,13 +1,12 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Toaster, toast } from "react-hot-toast";
+import { toast } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Photo from "../assets/images/ceo-desk.jpeg";
 import { AuthContext } from "../context";
 const Login = () => {
   return (
     <div className="min-h-screen flex justify-center items-center">
-      <Toaster />
       <Form />;
     </div>
   );
@@ -20,11 +19,9 @@ export const Form = () => {
   const { register: reg, handleSubmit } = useForm();
 
   const {
-    user,
     setUser,
     register: registrationFunction,
     signInWithGoogle,
-    logout,
     login,
     updateUserName,
     setLoading,

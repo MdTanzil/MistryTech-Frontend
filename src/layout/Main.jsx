@@ -1,4 +1,3 @@
-import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 import GarmentsFurniture from "../componentes/Home/GarmentsFurniture/GarmentsFurniture";
 import HomeFurniture from "../componentes/Home/HomeFurniture/HomeFurniture";
@@ -27,7 +26,6 @@ const Main = () => {
           <RestaurantFurniture></RestaurantFurniture>
           <TermsConditions></TermsConditions>
           <Footer></Footer>
-          <Toaster />
         </SearchContextProvider>
       </AuthProvider>
     </div>
