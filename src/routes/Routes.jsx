@@ -4,6 +4,7 @@ import Home from "../componentes/Home/Home/Home";
 import Main from "../layout/Main";
 import AuthProvider from "../provider/AuthProvider";
 import Collections from "../Page/collections/Collections";
+import ProductDetails from "../Page/ProductDetails/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/collection",
     element: <Collections></Collections>,
+  },
+  {
+    path:"/product-details",
+    element:<ProductDetails></ProductDetails>
   },
 ]);
 export default router;
