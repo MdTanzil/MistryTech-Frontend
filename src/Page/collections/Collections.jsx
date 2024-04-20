@@ -2,17 +2,17 @@ import Img from "../../assets/images/collections-hero.jpg";
 
 import { useEffect, useRef, useState } from "react";
 const Collections = () => {
-    
   const [open, setOpen] = useState(false);
   const dropDownRef = useRef(null);
-  const items = ['React', 'Angular', 'Vue'];
-  
+  const items = ["React", "Angular", "Vue"];
+
   useEffect(() => {
     const close = (e) => {
-      if (dropDownRef.current && !dropDownRef.current.contains(e.target)) setOpen(false);
+      if (dropDownRef.current && !dropDownRef.current.contains(e.target))
+        setOpen(false);
     };
-    document.addEventListener('mousedown', close);
-    return () => document.removeEventListener('mousedown', close);
+    document.addEventListener("mousedown", close);
+    return () => document.removeEventListener("mousedown", close);
   }, []);
   return (
     <div>
@@ -35,7 +35,7 @@ const Collections = () => {
               Open drawer
             </label>
           </div>
-          <div className="drawer-side">
+          <div className="drawer-side z-10">
             <label
               htmlFor="my-drawer"
               aria-label="close sidebar"
