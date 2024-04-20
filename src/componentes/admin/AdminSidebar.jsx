@@ -12,7 +12,6 @@ const AdminSidebar = () => {
     <div>
       {/* <!-- component --> */}
 
-      {/* TODO: Update icon from react icons */}
 
       <div className="min-h-screen flex flex-row ">
         <div className="flex flex-col  bg-primary rounded-r-xl overflow-hidden">
