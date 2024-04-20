@@ -26,7 +26,7 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <div className="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="container mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
         <div>
           <img src={Img} alt="" />
         </div>

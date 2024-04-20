@@ -21,6 +21,10 @@ const router = createBrowserRouter([
         path: "/collections",
         element: <Collections></Collections>,
       },
+      {
+        path: "/product-details",
+        element: <ProductDetails></ProductDetails>,
+      },
     ],
   },
 
@@ -41,10 +45,6 @@ const router = createBrowserRouter([
         element: <AdminHome />,
       },
     ],
-  },
-  {
-    path: "/product-details",
-    element: <ProductDetails></ProductDetails>,
   },
 ]);
 export default router;
