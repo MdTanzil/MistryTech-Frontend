@@ -75,11 +75,18 @@ const UpperNavbar = () => {
         </Link>
         <div className="flex items-center justify-between gap-16">
           <div className="form-control relative">
-            <input
+            {/* <input
               type="text"
               placeholder="Search"
               className="input input-bordered w-24 md:w-auto pr-10"
               onFocus={() => setIsSearch(true)}
+            /> */}
+            <input
+              className="rounded-lg border border-secondary bg-transparent px-4 py-2  focus:outline-none w-[570px]"
+              type="text"
+              placeholder="Search Product"
+              ref={inputRef}
+              onBlur={() => setIsSearch(false)}
             />
             <button className="btn btn-ghost btn-circle absolute right-0 top-0 bottom-0 m-auto">
               <svg

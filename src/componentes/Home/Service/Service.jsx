@@ -1,6 +1,6 @@
 import Returns from "../../../assets/images/Returns & Warranty. svg-01.svg";
 import EMI from "../../../assets/images/EMI Available. svg.svg";
-import Customer from "../../../assets/images/Customer Support. svg-01.svg";
+import Customer from "../../../assets/images/Customer Support.2-01.svg";
 
 const Service = () => {
   return (
@@ -23,7 +23,7 @@ const Service = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center text-center">
-          <img src={Customer} alt="" className="w-36 mx-auto" />
+          <img src={Customer} alt="" className="w-52 mb-[-60px] " />
           <h4 className="text-3xl font-medium">Customer Support</h4>
           <p className="text-lg">
             Get help anytime! Our friendly customer support team is here for you

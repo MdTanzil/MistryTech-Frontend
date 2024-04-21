@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1600">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #d78e31;
+      }
+
+      .cls-1, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2, .cls-4, .cls-6, .cls-7 {
+        stroke: #fff;
+      }
+
+      .cls-2, .cls-5, .cls-6, .cls-7 {
+        stroke-width: 4px;
+      }
+
+      .cls-4 {
+        stroke-width: 3px;
+      }
+
+      .cls-4, .cls-5, .cls-7 {
+        fill: none;
+      }
+
+      .cls-3, .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-8 {
+        font-family: MyriadPro-Bold, 'Myriad Pro';
+        font-size: 82.76px;
+        font-weight: 700;
+      }
+
+      .cls-5 {
+        stroke: #231f20;
+      }
+
+      .cls-9 {
+        fill: #e2492c;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 165.52px;
+      }
+
+      .cls-6 {
+        fill: #c37729;
+      }
+    </style>
+  </defs>
+  <rect class="cls-5" x="590.43" y="580.85" width="381.18" height="178.18"/>
+  <rect class="cls-7" x="781.01" y="580.85" width="190.59" height="89.09"/>
+  <rect class="cls-7" x="781.01" y="670.5" width="190.59" height="89.09"/>
+  <rect class="cls-7" x="590.43" y="580.85" width="190.59" height="178.74"/>
+  <polygon class="cls-6" points="777.28 655.33 760 655.33 760 691.19 781.01 691.19 781.01 655.33 777.28 655.33"/>
+  <line class="cls-7" x1="620.61" y1="550.66" x2="700.45" y2="550.66"/>
+  <polygon class="cls-2" points="860.12 528.27 903.45 528.27 946.78 528.27 919.51 467.91 883.49 467.91 860.12 528.27"/>
+  <path class="cls-3" d="M877.81,580.28c0-14.2,11.95-25.72,26.69-25.72s26.69,11.52,26.69,25.72"/>
+  <rect class="cls-3" x="868.15" y="601.54" width="13.79" height="13.79"/>
+  <rect class="cls-3" x="868.15" y="687.22" width="13.79" height="13.79"/>
+  <polygon class="cls-3" points="600.16 759.59 600.16 815.01 664.42 759.59 600.16 759.59"/>
+  <polygon class="cls-3" points="963.02 761.82 962.75 817.24 898.76 761.52 963.02 761.82"/>
+  <path class="cls-4" d="M539.8,815.01s47.1,19.59,68.28,1.25c1.6-1.39,3.37-2.56,5.23-3.58,8.82-4.8,30.85-14.04,47.23,2.33,0,0,20.82,23.09,44.57,2.47,2.58-2.24,5.54-3.96,8.71-5.23,9.52-3.82,28.2-9.2,40.88.78,2.18,1.71,4.45,3.29,6.96,4.46,8.38,3.92,26.19,10.14,39.56.07,2.84-2.14,5.99-3.84,9.37-4.95,9.95-3.28,29.07-7.85,40.29.69,1.86,1.42,3.79,2.71,5.92,3.69,8.68,3.98,29.74,11.66,44.53.7,2.96-2.2,6.25-3.92,9.77-5.02,10.69-3.33,31.58-8.04,42.53,1.46,1.53,1.33,3.25,2.4,5.03,3.37,7.01,3.83,21.85,9.93,35.05,2.26,5.13-2.98,10.86-4.76,16.79-4.76h16.11"/>
+  <path class="cls-7" d="M980.37,1092.75h233.67-233.67Z"/>
+  <path class="cls-7" d="M609.41,1096.39h-223.45,223.45Z"/>
+  <text class="cls-9" transform="translate(418.6 980.93)"><tspan x="0" y="0">Mistrytech</tspan></text>
+  <text class="cls-8" transform="translate(631.35 1113.41)"><tspan x="0" y="0">furniture</tspan></text>
+  <line class="cls-7" x1="904.5" y1="554.56" x2="903.45" y2="528.27"/>
+  <rect class="cls-1" x="1008.49" y="665.14" width="16.24" height="16.24" rx="3.22" ry="3.22" transform="translate(-178.31 916.05) rotate(-45)"/>
+  <rect class="cls-1" x="535.32" y="665.14" width="16.24" height="16.24" rx="3.22" ry="3.22" transform="translate(-316.9 581.46) rotate(-45)"/>
+</svg>

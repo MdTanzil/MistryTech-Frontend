@@ -1,10 +1,10 @@
-import icon from '../../assets/images/Mistrytech furniture logo svg.svg'
+import icon from '../../assets/images/Mistrytech furniture logo white svg.2-01.svg'
 const Footer = () => {
   return (
     <div>
       <footer className="footer p-10 bg-zinc-900 text-base-content">
         <aside>
-         <img src={icon} alt="" className='h-[56px] ' />
+         <img src={icon} alt="" className='h-36  ' />
           <p className="text-white">
             Help Line: +8801897711118
             <br />

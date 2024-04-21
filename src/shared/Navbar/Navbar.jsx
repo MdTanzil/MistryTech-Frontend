@@ -4,9 +4,13 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   //   const [homeDropdown, setHomeDropDown] = useState(false);
   const [homeFurnitureDropdown, setHomeFurnitureDropdown] = useState(false);
-  const [commercialDropdown, setCommercialDropDown] = useState(false);
-  const [swimmingPoolDropDown, setSwimmingPoolDropDown] = useState(false);
-  const [healthcareDropDown, setHealthcareDropDown] = useState(false);
+  const [officeFurnitureDropdown, setOfficeFurnitureDropDown] = useState(false);
+  const [garmentsFurnitureDropDown, setGarmentsFurnitureDropDown] =
+    useState(false);
+  const [schoolFurnitureDropDown, setSchoolFurnitureDropDown] =
+    useState(false);
+  const [restaurantFurnitureDropDown, setRestaurantFurnitureDropDown] =
+    useState(false);
   const [aboutUsDropDown, setAboutUsDropDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -43,7 +47,139 @@ const NavBar = () => {
           menuOpen ? "block" : "hidden"
         }`}
       >
-        <div className="text-sm lg:flex-growflex flex-col lg:flex-row">
+        <div className="text-sm lg:flex-grow flex flex-col lg:flex-row">
+          <div className="relative inline">
+            <NavLink
+              onMouseEnter={() => setOfficeFurnitureDropDown(true)}
+              onMouseLeave={() => setOfficeFurnitureDropDown(false)}
+              to="/commercial"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
+            >
+              <div className="flex items-center gap-1">
+                Office Furniture
+                {officeFurnitureDropdown ? (
+                  <MdKeyboardArrowDown />
+                ) : (
+                  <MdKeyboardArrowUp />
+                )}
+              </div>
+            </NavLink>
+            {officeFurnitureDropdown && (
+              <div
+                onMouseEnter={() => setOfficeFurnitureDropDown(true)}
+                onMouseLeave={() => setOfficeFurnitureDropDown(false)}
+                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-96 left-0 top-full "
+              >
+                <div className="flex">
+                  <div className="w-1/2">
+                    <NavLink
+                      to="/home-interior"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      CEO Desk
+                    </NavLink>
+                    <NavLink
+                      to="/villa-interior"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Chair
+                    </NavLink>
+                    <NavLink
+                      to="/duplex-house"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Coffee Table
+                    </NavLink>
+                    <NavLink
+                      to="/luxury-pent-house"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Conference Table
+                    </NavLink>
+                    <NavLink
+                      to="/luxury-pent-house"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Executive Desk
+                    </NavLink>
+                    <NavLink
+                      to="/luxury-pent-house"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Reception Desk
+                    </NavLink>
+                    <NavLink
+                      to="/luxury-pent-house"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Sofa
+                    </NavLink>
+                    <NavLink
+                      to="/luxury-pent-house"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Storage
+                    </NavLink>
+                    <NavLink
+                      to="/luxury-pent-house"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Workstation
+                    </NavLink>
+                  </div>
+                  <div className="w-1/2"></div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="relative inline">
+            <NavLink
+              onMouseEnter={() => setGarmentsFurnitureDropDown(true)}
+              onMouseLeave={() => setGarmentsFurnitureDropDown(false)}
+              to="/swimming-pool"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
+            >
+              <div className="flex items-center gap-1">
+                Garments Furniture
+                {garmentsFurnitureDropDown ? (
+                  <MdKeyboardArrowDown />
+                ) : (
+                  <MdKeyboardArrowUp />
+                )}
+              </div>
+            </NavLink>
+            {garmentsFurnitureDropDown && (
+              <div
+                onMouseEnter={() => setGarmentsFurnitureDropDown(true)}
+                onMouseLeave={() => setGarmentsFurnitureDropDown(false)}
+                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-[450px] left-0 top-full"
+              >
+                <div className="flex">
+                  <div className="w-1/2">
+                    <NavLink
+                      to="/indoor-swimming-pool"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Display Rack
+                    </NavLink>
+                    <NavLink
+                      to="/outdoor-swimming-pool"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Storage Rack
+                    </NavLink>
+                    <NavLink
+                      to="/outdoor-swimming-pool"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Trolley
+                    </NavLink>
+                  </div>
+                  <div className="w-1/2"></div>
+                </div>
+              </div>
+            )}
+          </div>
           <div className="relative inline-block">
             <NavLink
               onMouseEnter={() => setHomeFurnitureDropdown(true)}
@@ -64,7 +200,7 @@ const NavBar = () => {
               <div
                 onMouseEnter={() => setHomeFurnitureDropdown(true)}
                 onMouseLeave={() => setHomeFurnitureDropdown(false)}
-                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-full lg:w-[1400px] justify-center top-full left-[-220px]"
+                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-full lg:w-[1400px] justify-center top-full left-[-420px]"
               >
                 <div className="container mx-auto px-4 lg:px-0">
                   <div className="grid grid-cols-6 gap-4">
@@ -73,266 +209,56 @@ const NavBar = () => {
                         to="/home-interior"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Home Interior
+                        Beds
                       </NavLink>
                       <NavLink
                         to="/villa-interior"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Villa Interior
+                        Wardrobe
                       </NavLink>
                       <NavLink
                         to="/duplex-house"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Duplex House
+                        Dressing Table
                       </NavLink>
                       <NavLink
                         to="/luxury-pent-house"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Luxury House
+                        Dinning Table
                       </NavLink>
                       <NavLink
                         to="/luxury-pent-house"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Luxury House
+                        Coffee Table
                       </NavLink>
                       <NavLink
                         to="/luxury-pent-house"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Luxury House
+                        Sofa
                       </NavLink>
                       <NavLink
                         to="/luxury-pent-house"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Luxury House
+                        Showcase/TV unit
                       </NavLink>
                       <NavLink
                         to="/luxury-pent-house"
                         className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                       >
-                        Luxury House
-                      </NavLink>
-                      <NavLink
-                        to="/luxury-pent-house"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Luxury House
-                      </NavLink>
-                      <NavLink
-                        to="/luxury-pent-house"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Luxury House
-                      </NavLink>
-                      <NavLink
-                        to="/luxury-pent-house"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Luxury House
+                        chair
                       </NavLink>
                     </div>
-                    <div>
-                      <NavLink
-                        to="/home-renovation"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Home Renovation
-                      </NavLink>
-                      <NavLink
-                        to="/apartments"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Apartment
-                      </NavLink>
-                      <NavLink
-                        to="/loft-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Loft Interior
-                      </NavLink>
-                      <NavLink
-                        to="/islamic-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Islamic Interior
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        to="/home-renovation"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Home Renovation
-                      </NavLink>
-                      <NavLink
-                        to="/apartments"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Apartment
-                      </NavLink>
-                      <NavLink
-                        to="/loft-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Loft Interior
-                      </NavLink>
-                      <NavLink
-                        to="/islamic-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Islamic Interior
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        to="/home-renovation"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Home Renovation
-                      </NavLink>
-                      <NavLink
-                        to="/apartments"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Apartment
-                      </NavLink>
-                      <NavLink
-                        to="/loft-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Loft Interior
-                      </NavLink>
-                      <NavLink
-                        to="/islamic-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Islamic Interior
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        to="/home-renovation"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Home Renovation
-                      </NavLink>
-                      <NavLink
-                        to="/apartments"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Apartment
-                      </NavLink>
-                      <NavLink
-                        to="/loft-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Loft Interior
-                      </NavLink>
-                      <NavLink
-                        to="/islamic-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Islamic Interior
-                      </NavLink>
-                    </div>
-                    <div>
-                      <NavLink
-                        to="/home-renovation"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Home Renovation
-                      </NavLink>
-                      <NavLink
-                        to="/apartments"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Apartment
-                      </NavLink>
-                      <NavLink
-                        to="/loft-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Loft Interior
-                      </NavLink>
-                      <NavLink
-                        to="/islamic-interior"
-                        className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                      >
-                        Islamic Interior
-                      </NavLink>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-
-          <div className="relative inline">
-            <NavLink
-              onMouseEnter={() => setCommercialDropDown(true)}
-              onMouseLeave={() => setCommercialDropDown(false)}
-              to="/commercial"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
-            >
-              Office Furniture
-            </NavLink>
-            {commercialDropdown && (
-              <div
-                onMouseEnter={() => setCommercialDropDown(true)}
-                onMouseLeave={() => setCommercialDropDown(false)}
-                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-96 left-0 top-full mt-3"
-              >
-                <div className="flex">
-                  <div className="w-1/2">
-                    <NavLink
-                      to="/office-design"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Office Design
-                    </NavLink>
-                    <NavLink
-                      to="/corporate"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Corporate
-                    </NavLink>
-                    <NavLink
-                      to="/retail-shop"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Retail Shop - store
-                    </NavLink>
-                    <NavLink
-                      to="/news-room"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      News Room
-                    </NavLink>
-                  </div>
-                  <div className="w-1/2">
-                    <NavLink
-                      to="/modeling-rendering"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      3D Modeling & Rendering
-                    </NavLink>
-                    <NavLink
-                      to="/baying-house"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Buying House
-                    </NavLink>
-                    <NavLink
-                      to="/auditorium-design"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Auditorium Interior Design
-                    </NavLink>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                   </div>
                 </div>
               </div>
@@ -340,66 +266,25 @@ const NavBar = () => {
           </div>
           <div className="relative inline">
             <NavLink
-              onMouseEnter={() => setSwimmingPoolDropDown(true)}
-              onMouseLeave={() => setSwimmingPoolDropDown(false)}
-              to="/swimming-pool"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
-            >
-              Garments Furniture
-            </NavLink>
-            {swimmingPoolDropDown && (
-              <div
-                onMouseEnter={() => setSwimmingPoolDropDown(true)}
-                onMouseLeave={() => setSwimmingPoolDropDown(false)}
-                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-[450px] left-0 top-full mt-3"
-              >
-                <div className="flex">
-                  <div className="w-1/2">
-                    <NavLink
-                      to="/indoor-swimming-pool"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Indoor Swimming Pool
-                    </NavLink>
-                    <NavLink
-                      to="/outdoor-swimming-pool"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Outdoor Swimming Pool
-                    </NavLink>
-                  </div>
-                  <div className="w-1/2">
-                    <NavLink
-                      to="/modern-pool"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Modern Houses With Pools
-                    </NavLink>
-                    <NavLink
-                      to="/rooftop-swimming-pool"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-                    >
-                      Rooftop Swimming Pool
-                    </NavLink>
-                  </div>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="relative inline">
-            <NavLink
-              onMouseEnter={() => setHealthcareDropDown(true)}
-              onMouseLeave={() => setHealthcareDropDown(false)}
+              onMouseEnter={() => setSchoolFurnitureDropDown(true)}
+              onMouseLeave={() => setSchoolFurnitureDropDown(false)}
               to="/healthcare"
               className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
-              School Furniture
+              <div className="flex items-center gap-1">
+                School Furniture{" "}
+                {schoolFurnitureDropDown ? (
+                  <MdKeyboardArrowDown />
+                ) : (
+                  <MdKeyboardArrowUp />
+                )}
+              </div>
             </NavLink>
-            {healthcareDropDown && (
+            {schoolFurnitureDropDown && (
               <div
-                onMouseEnter={() => setHealthcareDropDown(true)}
-                onMouseLeave={() => setHealthcareDropDown(false)}
-                className="absolute z-10 bg-white shadow-md py-2 rounded-lg text-sm w-96 left-0 top-full mt-3"
+                onMouseEnter={() => setSchoolFurnitureDropDown(true)}
+                onMouseLeave={() => setSchoolFurnitureDropDown(false)}
+                className="absolute z-10 bg-white shadow-md py-2 rounded-lg text-sm w-96 left-0 top-full"
               >
                 <div className="flex">
                   <div className="w-1/2">
@@ -407,7 +292,7 @@ const NavBar = () => {
                       to="/hospital-space-interior"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
-                      Hospital Space Interior
+                      Bench Set
                     </NavLink>
                     <NavLink
                       to="/dental-clinic"
@@ -419,41 +304,82 @@ const NavBar = () => {
                       to="/rehabilitation-clinic"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
-                      Rehabilitation Center
+                      Desk
                     </NavLink>
                     <NavLink
                       to="/healthcare-center"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
-                      Healthcare Center
+                      Teacher&apos;s Desk
+                    </NavLink>
+                    <NavLink
+                      to="/healthcare-center"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Chair
+                    </NavLink>
+                    <NavLink
+                      to="/healthcare-center"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                    >
+                      Storage
                     </NavLink>
                   </div>
+                  <div className="w-1/2"></div>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="relative inline">
+            <NavLink
+              onMouseEnter={() => setRestaurantFurnitureDropDown(true)}
+              onMouseLeave={() => setRestaurantFurnitureDropDown(false)}
+              to="/healthcare"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
+            >
+              <div className="flex items-center gap-1">
+                Restaurant Furniture{" "}
+                {restaurantFurnitureDropDown ? (
+                  <MdKeyboardArrowDown />
+                ) : (
+                  <MdKeyboardArrowUp />
+                )}
+              </div>
+            </NavLink>
+            {restaurantFurnitureDropDown && (
+              <div
+                onMouseEnter={() => setRestaurantFurnitureDropDown(true)}
+                onMouseLeave={() => setRestaurantFurnitureDropDown(false)}
+                className="absolute z-10 bg-white shadow-md py-2 rounded-lg text-sm w-96 left-0 top-full "
+              >
+                <div className="flex">
                   <div className="w-1/2">
                     <NavLink
-                      to="/medical-clinic"
+                      to="/hospital-space-interior"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
-                      Medical Clinic
+                      Sofa
                     </NavLink>
                     <NavLink
-                      to="/diagnostic-center"
+                      to="/dental-clinic"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
-                      Diagnostics Center
+                      Chair
                     </NavLink>
                     <NavLink
-                      to="/spa-beauty-parlour"
+                      to="/rehabilitation-clinic"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
-                      Spa & Beauty Parlour
+                      Table
                     </NavLink>
                     <NavLink
-                      to="/bath-house-design"
+                      to="/healthcare-center"
                       className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
                     >
-                      Bath House Design
+                      Deli Table
                     </NavLink>
                   </div>
+                  <div className="w-1/2"></div>
                 </div>
               </div>
             )}
@@ -477,14 +403,6 @@ const NavBar = () => {
           </div>
           <div className="relative inline">
             <NavLink
-              to="/blog"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
-            >
-              All Furniture
-            </NavLink>
-          </div>
-          <div className="relative inline">
-            <NavLink
               onMouseEnter={() => setAboutUsDropDown(true)}
               onMouseLeave={() => setAboutUsDropDown(false)}
               to="/about-us"
@@ -496,7 +414,7 @@ const NavBar = () => {
               <div
                 onMouseEnter={() => setAboutUsDropDown(true)}
                 onMouseLeave={() => setAboutUsDropDown(false)}
-                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-96 right-0 top-full mt-3"
+                className="absolute z-10 bg-white shadow-md py-2 rounded-sm text-sm w-96 right-0 top-full"
               >
                 <div className="flex">
                   <div className="w-1/2">
@@ -542,6 +460,14 @@ const NavBar = () => {
                 </div>
               </div>
             )}
+          </div>
+          <div className="relative inline">
+            <NavLink
+              to="/blog"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
+            >
+              All Furniture
+            </NavLink>
           </div>
         </div>
       </div>
