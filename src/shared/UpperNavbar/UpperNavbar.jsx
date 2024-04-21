@@ -82,7 +82,7 @@ const UpperNavbar = () => {
               onFocus={() => setIsSearch(true)}
             /> */}
             <input
-              className="rounded-lg border border-secondary bg-transparent px-4 py-2  focus:outline-none w-[570px]"
+              className="rounded-lg border border-secondary bg-transparent px-4 py-2  focus:outline-none w-[570px] "
               type="text"
               placeholder="Search Product"
               ref={inputRef}
