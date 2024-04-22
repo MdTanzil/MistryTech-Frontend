@@ -18,3 +18,8 @@
   height: 100%;
   object-fit: cover;
 }
+
+.swiper-pagination-bullet {
+  background-color: #ffff;
+  /* padding: 5px;g */
+}

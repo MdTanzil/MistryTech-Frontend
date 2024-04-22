@@ -7,17 +7,29 @@ import "swiper/css/pagination";
 import "./styles.css";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { useRef } from "react";
+import { Autoplay, Pagination } from "swiper/modules";
 
 export default function Carusel() {
+  const progressCircle = useRef(null);
+  const progressContent = useRef(null);
+  const onAutoplayTimeLeft = (s, time, progress) => {
+    progressCircle.current.style.setProperty("--progress", 1 - progress);
+    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  };
   return (
     <>
       <Swiper
         spaceBetween={30}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
+        onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="h-60 w-full md:h-[470px] lg:h-[640px] relative overflow-hidden "
       >
         <SwiperSlide>
@@ -59,6 +71,12 @@ export default function Carusel() {
                 Lorem, ipsum dolor.lorem2 Lorem ipsum dolor sit amet.
               </h4>
             </div>
+          </div>
+          <div className="autoplay-progress hidden" slot="container-end">
+            <svg viewBox="0 0 48 48" ref={progressCircle}>
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span ref={progressContent}></span>
           </div>
         </SwiperSlide>
       </Swiper>
