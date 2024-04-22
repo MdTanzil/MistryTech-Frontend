@@ -1,6 +1,6 @@
-import Carusel from "./Carusel";
+import Carousel from "./Carousel";
 const Slider = () => {
-  return <Carusel />;
+  return <Carousel />;
 };
 
 export default Slider;

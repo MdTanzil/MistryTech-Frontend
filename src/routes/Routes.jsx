@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import Error from "../Page/Error";
 import Login from "../Page/Login";
 import ProductDetails from "../Page/ProductDetails/ProductDetails";
 import AdminHome from "../Page/admin/AdminHome";
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
         element: <ProductDetails></ProductDetails>,
       },
     ],
+    errorElement: <Error />,
   },
 
   {
