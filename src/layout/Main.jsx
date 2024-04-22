@@ -6,11 +6,13 @@ import NavBar from "../shared/Navbar/Navbar";
 import UpperNavbar from "../shared/UpperNavbar/UpperNavbar";
 const Main = () => {
   return (
-    <div>
+    <div className="">
       <AuthProvider>
         <SearchContextProvider>
-          <UpperNavbar></UpperNavbar>
-          <NavBar></NavBar>
+          <div className="sticky top-0 z-20">
+            <UpperNavbar></UpperNavbar>
+            <NavBar></NavBar>
+          </div>
 
           <Outlet></Outlet>
           <Footer></Footer>

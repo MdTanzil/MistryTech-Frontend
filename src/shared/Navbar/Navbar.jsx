@@ -7,18 +7,17 @@ const NavBar = () => {
   const [officeFurnitureDropdown, setOfficeFurnitureDropDown] = useState(false);
   const [garmentsFurnitureDropDown, setGarmentsFurnitureDropDown] =
     useState(false);
-  const [schoolFurnitureDropDown, setSchoolFurnitureDropDown] =
-    useState(false);
+  const [schoolFurnitureDropDown, setSchoolFurnitureDropDown] = useState(false);
   const [restaurantFurnitureDropDown, setRestaurantFurnitureDropDown] =
     useState(false);
   const [aboutUsDropDown, setAboutUsDropDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="flex flex-col lg:flex-row items-center justify-center bg-primary ">
-      <div className="flex items-center justify-between px-4 py-2 lg:p-0">
+    <nav className="flex  flex-col lg:flex-row items-center justify-center bg-primary ">
+      <div className="flex justify-start px-4 py-2 lg:p-0">
         <button
-          className="block lg:hidden  items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
+          className="block lg:hidden items-center px-3 py-2 border rounded text-white border-white hover:text-white hover:border-white"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <svg
