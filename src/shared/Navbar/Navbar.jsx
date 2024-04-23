@@ -42,11 +42,11 @@ const NavBar = () => {
         </button>
       </div>
       <div
-        className={`lg:flex lg:flex-row lg:items-center lg:justify-between ${
+        className={`lg:flex lg:flex-row lg:items-center lg:justify-between  container ${
           menuOpen ? "block" : "hidden"
         }`}
       >
-        <div className="text-sm lg:flex-grow flex flex-col lg:flex-row">
+        <div className="text-sm lg:flex-grow flex flex-col lg:flex-row lg:justify-between">
           <div className="relative inline">
             <NavLink
               onMouseEnter={() => setOfficeFurnitureDropDown(true)}
