@@ -45,15 +45,15 @@ const UpperNavbar = () => {
               </button>
             </div>
             <ul className="flex items-center justify-between gap-10 text-black">
-              <li className="group flex  cursor-pointer flex-col">
+              <li className="group flex  cursor-pointer flex-col font-medium">
                 Help Center{" "}
                 <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li className="group flex  cursor-pointer flex-col">
+              <li className="group flex  cursor-pointer flex-col font-medium">
                 Contact Us{" "}
                 <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li className="group flex  cursor-pointer flex-col">
+              <li className="group flex  cursor-pointer flex-col font-medium">
                 Meeting Request{" "}
                 <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
               </li>

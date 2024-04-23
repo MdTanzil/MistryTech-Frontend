@@ -463,7 +463,7 @@ const NavBar = () => {
           <div className="relative inline">
             <NavLink
               to="/blog"
-              className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
+              className="block mt-4 lg:inline-block lg:mt-0 text-white  pr-0   p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
               All Furniture
             </NavLink>
