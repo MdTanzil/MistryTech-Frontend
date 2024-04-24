@@ -36,7 +36,7 @@ export default function Carousel() {
           <div className="absolute h-full w-full bg-[#0000005c] mix-blend-darken"></div>
           <div className="absolute h-full flex w-full  justify-center items-center">
             <div className="w-fit h-fit  text-white">
-              <h2 className="font-semibold text-7xl flex justify-center items-center">
+              <h2 className="font-semibold lg:text-7xl  text-xl flex justify-center items-center">
                 Complements Your lifestyle
                 <div className="bg-primary pl-5 ml-4  h-1 w-20"></div>
               </h2>
@@ -53,7 +53,7 @@ export default function Carousel() {
           <div className="absolute h-full w-full bg-[#0000005c] mix-blend-darken"></div>
           <div className="absolute h-full flex w-full  justify-center items-center">
             <div className="w-fit h-fit  text-white">
-              <h2 className="font-semibold text-7xl flex justify-center items-center">
+              <h2 className="font-semibold lg:text-7xl text-xl flex justify-center items-center">
                 Sets you as a trend
                 <div className="bg-primary pl-5 ml-4  h-1 w-20"></div>
               </h2>
@@ -76,7 +76,7 @@ export default function Carousel() {
           <div className="absolute h-full w-full bg-[#0000005c] mix-blend-darken"></div>
           <div className="absolute h-full flex w-full  justify-center items-center">
             <div className="w-fit h-fit  text-white">
-              <h2 className="font-semibold text-7xl flex justify-center items-center">
+              <h2 className="font-semibold lg:text-7xl text-xl flex justify-center items-center">
                 Made for creating tasty memories
                 <div className="bg-primary pl-5 ml-4  h-1 w-20"></div>
               </h2>

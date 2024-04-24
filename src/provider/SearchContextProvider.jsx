@@ -1,19 +1,37 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { SearchContext } from "../context";
 
+const SearchContextProvider = ({ children }) => {
+  const [isSearch, setIsSearch] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(false);
+  useEffect(() => {
+    // Function to update isMobileView based on screen width
+    const updateIsMobileView = () => {
+      setIsMobileView(window.innerWidth <= 768); // Adjust this value according to your design
+    };
 
-const SearchContextProvider = ({children }) => {
-    const [isSearch, setIsSearch] = useState(false);
-    const val = {
-        isSearch,
-        setIsSearch
-    }
-    return (
-        <SearchContext.Provider value={val}>
-            {children}
-        </SearchContext.Provider>
-    );
+    // Call the function once to initialize
+    updateIsMobileView();
+
+    // Add event listener to update isMobileView when window is resized
+    window.addEventListener("resize", updateIsMobileView);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", updateIsMobileView);
+    };
+  }, []);
+
+  const val = {
+    isSearch,
+    setIsSearch,
+    isMobileView,
+    setIsMobileView,
+  };
+  return (
+    <SearchContext.Provider value={val}>{children}</SearchContext.Provider>
+  );
 };
 
 export default SearchContextProvider;

@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { IoMenu } from "react-icons/io5";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import { SearchContext } from "../../context";
 const NavBar = () => {
   //   const [homeDropdown, setHomeDropDown] = useState(false);
   const [homeFurnitureDropdown, setHomeFurnitureDropdown] = useState(false);
@@ -12,8 +14,8 @@ const NavBar = () => {
     useState(false);
   const [aboutUsDropDown, setAboutUsDropDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
+  const { isMobileView } = useContext(SearchContext);
+  const largeNav = (
     <nav className="flex  flex-col lg:flex-row items-center justify-center bg-primary ">
       <div className="flex justify-start px-4 py-2 lg:p-0">
         <button
@@ -451,7 +453,7 @@ const NavBar = () => {
                     </NavLink>
                     <NavLink
                       to="/contact-us"
-                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+                      className="block px-4 py-2 text-gray-800 hover:bg-gray-200 "
                     >
                       Contact Us
                     </NavLink>
@@ -472,6 +474,16 @@ const NavBar = () => {
       </div>
     </nav>
   );
+  const smallNav = (
+    <div className="absolute top-7 right-0">
+      <button>
+        <IoMenu className="text-3xl font-medium " />
+      </button>
+    </div>
+  );
+
+  const nav = isMobileView ? smallNav : largeNav;
+  return nav;
 };
 
 export default NavBar;

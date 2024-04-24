@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/Mistrytech furniture logo svg.svg";
 import { AuthContext } from "../../context";
 import AvatarDropDown from "../../profile/AvarterDropDown";
+
 const UpperNavbar = () => {
   const inputRef = useRef(null);
   const { user } = useContext(AuthContext);
@@ -15,14 +16,14 @@ const UpperNavbar = () => {
         <div className="flex container mx-auto justify-between">
           <Link
             to={"/"}
-            className="scale-110 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold transition-all duration-200 hover:scale-120"
+            className=" cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold transition-all duration-200 hover:scale-120"
           >
             <img src={Logo} alt="" className="  h-[56px] " />
           </Link>
-          <div className="flex items-center  justify-between gap-16">
+          <div className="flex items-center justify-end lg:justify-between gap-1 lg:gap-16">
             <div className="form-control relative">
               <input
-                className="rounded-lg border border-primary bg-transparent px-4 py-2  focus:outline-none w-[570px] "
+                className="rounded-lg border w-40 border-primary bg-transparent px-4 py-2  focus:outline-none lg:w-[570px] "
                 type="text"
                 placeholder="Search Product"
                 ref={inputRef}
@@ -45,29 +46,32 @@ const UpperNavbar = () => {
               </button>
             </div>
             <ul className="flex items-center justify-between gap-10 text-black">
-              <li className="group flex  cursor-pointer flex-col font-medium">
+              <li className="group lg:flex hidden lg:visible  cursor-pointer flex-col font-medium">
                 Help Center{" "}
                 <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li className="group flex  cursor-pointer flex-col font-medium">
+              <li className="group flex  cursor-pointer flex-col text-sm   font-medium">
                 Contact Us{" "}
                 <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li className="group flex  cursor-pointer flex-col font-medium">
+              <li className="group  lg:flex hidden lg:visible  cursor-pointer flex-col font-medium">
                 Meeting Request{" "}
                 <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
               </li>
             </ul>
-            <div className="flex  items-center justify-between gap-5">
+            <div className="flex  items-center justify-between gap-1 lg:gap-5">
               {!user ? (
-                <Link to={"/login"} className=" px-2 py-2 text-lg text-black  ">
+                <Link
+                  to={"/login"}
+                  className=" lg:px-2 lg:py-2 px-1 py-1 text-lg text-black hidden lg:visible "
+                >
                   <FaRegUser />
                 </Link>
               ) : (
                 <AvatarDropDown />
               )}
 
-              <Link className=" px-2 py-2 text-2xl text-black  ">
+              <Link className=" lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-0 text-black  ">
                 <AiOutlineShopping />
               </Link>
             </div>
