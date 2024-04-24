@@ -1,8 +1,11 @@
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
 import { useContext, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { SearchContext } from "../../context";
+import DrawerNav from "./DrawerNav";
 const NavBar = () => {
   //   const [homeDropdown, setHomeDropDown] = useState(false);
   const [homeFurnitureDropdown, setHomeFurnitureDropdown] = useState(false);
@@ -15,6 +18,27 @@ const NavBar = () => {
   const [aboutUsDropDown, setAboutUsDropDown] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const { isMobileView } = useContext(SearchContext);
+  const [open, setOpen] = useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+  const DrawerList = (
+    <Box
+      sx={{
+        width: 250,
+
+        // backgroundColor: "#d78e31",
+        // backgroundColor: "#e2492c",
+      }}
+      className="min-h-screen  "
+      role="presentation"
+      onClick={toggleDrawer(false)}
+    >
+      <DrawerNav />
+    </Box>
+  );
+
   const largeNav = (
     <nav className="flex  flex-col lg:flex-row items-center justify-center bg-primary ">
       <div className="flex justify-start px-4 py-2 lg:p-0">
@@ -476,9 +500,12 @@ const NavBar = () => {
   );
   const smallNav = (
     <div className="absolute top-7 right-0">
-      <button>
-        <IoMenu className="text-3xl font-medium " />
+      <button onClick={toggleDrawer(true)}>
+        <IoMenu className="text-3xl text-black font-medium " />
       </button>
+      <Drawer open={open} onClose={toggleDrawer(false)}>
+        {DrawerList}
+      </Drawer>
     </div>
   );
 

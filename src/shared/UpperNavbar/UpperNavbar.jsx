@@ -3,12 +3,14 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/Mistrytech furniture logo svg.svg";
-import { AuthContext } from "../../context";
+import { AuthContext, SearchContext } from "../../context";
 import AvatarDropDown from "../../profile/AvarterDropDown";
 
 const UpperNavbar = () => {
   const inputRef = useRef(null);
   const { user } = useContext(AuthContext);
+  const { isMobileView } = useContext(SearchContext);
+  const placeholder = isMobileView ? "Search" : "Search Product";
 
   return (
     <>
@@ -20,15 +22,15 @@ const UpperNavbar = () => {
           >
             <img src={Logo} alt="" className="  h-[56px] " />
           </Link>
-          <div className="flex items-center justify-end lg:justify-between gap-1 lg:gap-16">
+          <div className="flex items-center justify-between lg:justify-between gap-1 lg:gap-16">
             <div className="form-control relative">
               <input
-                className="rounded-lg border w-40 border-primary bg-transparent px-4 py-2  focus:outline-none lg:w-[570px] "
+                className="rounded-lg border w-32 border-primary bg-transparent px-4 py-2  focus:outline-none lg:w-[570px]  placeholder:text-sm placeholder:font-light lg:placeholder:text-base"
                 type="text"
-                placeholder="Search Product"
+                placeholder={placeholder}
                 ref={inputRef}
               />
-              <button className="btn btn-ghost btn-circle absolute right-0 top-0 bottom-0 m-auto">
+              <button className="btn btn-ghost btn-circle absolute right-0 top-0 bottom-0 m-auto ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
