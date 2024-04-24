@@ -279,11 +279,7 @@ const NavBar = () => {
                         chair
                       </NavLink>
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+          
                   </div>
                 </div>
               </div>

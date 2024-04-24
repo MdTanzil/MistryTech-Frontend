@@ -25,7 +25,7 @@ const UpperNavbar = () => {
           <div className="flex items-center justify-between lg:justify-between gap-1 lg:gap-16">
             <div className="form-control relative">
               <input
-                className="rounded-lg border w-32 border-primary bg-transparent px-4 py-2  focus:outline-none lg:w-[570px]  placeholder:text-sm placeholder:font-light lg:placeholder:text-base"
+                className="rounded-lg border w-32 border-primary bg-transparent px-4 py-2  focus:outline-none md:w-52 lg:w-[400px]  placeholder:text-sm placeholder:font-light lg:placeholder:text-base"
                 type="text"
                 placeholder={placeholder}
                 ref={inputRef}
@@ -65,7 +65,7 @@ const UpperNavbar = () => {
               {!user ? (
                 <Link
                   to={"/login"}
-                  className=" lg:px-2 lg:py-2 px-1 py-1 text-lg text-black hidden lg:visible "
+                  className="lg:px-2 lg:py-2 px-1 py-1 text-lg text-black hidden lg:inline "
                 >
                   <FaRegUser />
                 </Link>
@@ -73,7 +73,7 @@ const UpperNavbar = () => {
                 <AvatarDropDown />
               )}
 
-              <Link className=" lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-0 text-black  ">
+              <Link className=" lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black  ">
                 <AiOutlineShopping />
               </Link>
             </div>

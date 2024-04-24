@@ -8,7 +8,7 @@ const SearchContextProvider = ({ children }) => {
   useEffect(() => {
     // Function to update isMobileView based on screen width
     const updateIsMobileView = () => {
-      setIsMobileView(window.innerWidth <= 768); // Adjust this value according to your design
+      setIsMobileView(window.innerWidth <= 1024); // Adjust this value according to your design
     };
 
     // Call the function once to initialize
