@@ -52,10 +52,12 @@ const UpperNavbar = () => {
                 Help Center{" "}
                 <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
               </li>
-              <li className="group flex  cursor-pointer flex-col text-sm   font-medium">
-                Contact Us{" "}
-                <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
-              </li>
+              <Link to="/contact-us">
+                <li className="group flex  cursor-pointer flex-col text-sm   font-medium">
+                  Contact Us{" "}
+                  <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                </li>
+              </Link>
               <li className="group  lg:flex hidden lg:visible  cursor-pointer flex-col font-medium">
                 Meeting Request{" "}
                 <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
