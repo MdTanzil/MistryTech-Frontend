@@ -1,10 +1,10 @@
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import { Toaster } from "react-hot-toast";
 import { RouterProvider } from "react-router-dom";
+import "./index.css";
 import router from "./routes/Routes";
-import { Toaster } from 'react-hot-toast';
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 const theme = createTheme({
   palette: {
     primary: {
@@ -25,6 +25,7 @@ const theme = createTheme({
     ].join(","),
   },
 });
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <React.StrictMode>
