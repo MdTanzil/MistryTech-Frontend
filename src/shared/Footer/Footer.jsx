@@ -4,13 +4,13 @@ const Footer = () => {
     <div>
       <footer className="footer p-10 bg-zinc-900 text-base-content">
         <aside>
-         <img src={icon} alt="" className='h-36  ' />
+          <img src={icon} alt="" className="h-36  " />
           <p className="text-white">
-            Help Line: +8801897711118
+            Hotline: +8801999099009
             <br />
-            Messanger: m.me/fitmentcraft
+            Messenger: m.me/fitmentcraft
             <br />
-            Email: info@fitmentcraft.com
+            Email: mtl19.bd@gmail.com
           </p>
           <p className="text-white">Keep in touch with us</p>
           <div className="grid grid-flow-col gap-4 text-white">

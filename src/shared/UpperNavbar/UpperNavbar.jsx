@@ -58,10 +58,12 @@ const UpperNavbar = () => {
                   <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
                 </li>
               </Link>
-              <li className="group  lg:flex hidden lg:visible  cursor-pointer flex-col font-medium">
-                Meeting Request{" "}
-                <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
-              </li>
+              <Link to={"/meeting-request"}>
+                <li className="group  lg:flex hidden lg:visible  cursor-pointer flex-col font-medium">
+                  Meeting Request{" "}
+                  <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                </li>
+              </Link>
             </ul>
             <div className="flex  items-center justify-between gap-1 lg:gap-5">
               {!user ? (

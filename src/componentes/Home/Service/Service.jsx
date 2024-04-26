@@ -23,11 +23,14 @@ const Service = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center text-center">
-          <img src={Customer} alt="" className="w-52 mb-[-60px] " />
-          <h4 className="text-3xl font-medium">Customer Support</h4>
-          <p className="text-lg">
-            Get help anytime! Our friendly customer support team is here for you
-          </p>
+          <img src={Customer} alt="" className="w-52 mt-[-30px] mb-[-90px] mx-auto" />
+          <div className="mt-[53px]">
+            <h4 className="text-3xl font-medium">Customer Support</h4>
+            <p className="text-lg">
+              Get help anytime! Our friendly customer support team is here for
+              you
+            </p>
+          </div>
         </div>
       </div>
     </div>

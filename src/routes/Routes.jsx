@@ -9,6 +9,7 @@ import Admin from "../layout/Admin";
 import Main from "../layout/Main";
 import AuthProvider from "../provider/AuthProvider";
 import ContactUs from "../Page/ContactUs";
+import MeetingRequest from "../Page/MeetingRequest/MeetingRequest";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactUs></ContactUs>,
+      },
+      {
+        path:"/meeting-request",
+        element:<MeetingRequest></MeetingRequest>,
       },
     ],
     errorElement: <Error />,
