@@ -10,6 +10,8 @@ import Main from "../layout/Main";
 import AuthProvider from "../provider/AuthProvider";
 import ContactUs from "../Page/ContactUs";
 import MeetingRequest from "../Page/MeetingRequest/MeetingRequest";
+import BrandStory from "../shared/Footer/BrandStory";
+import HelpCenter from "../Page/HelpCenter/HelpCenter";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
       {
         path:"/meeting-request",
         element:<MeetingRequest></MeetingRequest>,
+      },
+      {
+        path:"/help-center",
+        element:<HelpCenter></HelpCenter>
+      },
+      {
+        path:"/brand-story",
+        element:<BrandStory></BrandStory>
       },
     ],
     errorElement: <Error />,

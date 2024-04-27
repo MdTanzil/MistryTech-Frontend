@@ -48,10 +48,12 @@ const UpperNavbar = () => {
               </button>
             </div>
             <ul className="flex items-center justify-between gap-10 text-black">
-              <li className="group lg:flex hidden lg:visible  cursor-pointer flex-col font-medium">
-                Help Center{" "}
-                <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
-              </li>
+              <Link to={"/help-center"}>
+                <li className="group lg:flex hidden lg:visible  cursor-pointer flex-col font-medium">
+                  Help Center{" "}
+                  <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
+                </li>
+              </Link>
               <Link to="/contact-us">
                 <li className="group flex  cursor-pointer flex-col text-sm   font-medium">
                   Contact Us{" "}

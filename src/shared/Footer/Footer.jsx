@@ -1,4 +1,5 @@
-import icon from '../../assets/images/Mistrytech furniture logo white svg.2-01.svg'
+import { Link } from "react-router-dom";
+import icon from "../../assets/images/Mistrytech furniture logo white svg.2-01.svg";
 const Footer = () => {
   return (
     <div>
@@ -51,7 +52,9 @@ const Footer = () => {
         </aside>
         <nav className="text-white">
           <h6 className="uppercase 2xl">About Us</h6>
-          <a className="link link-hover">Brand Story</a>
+          <Link to={"/brand-story"}>
+            <p className="link link-hover">Brand Story</p>
+          </Link>
           <a className="link link-hover">Contact Us</a>
           <a className="link link-hover">Careers</a>
           <a className="link link-hover">Business Entity Record</a>
