@@ -12,6 +12,8 @@ import ContactUs from "../Page/ContactUs";
 import MeetingRequest from "../Page/MeetingRequest/MeetingRequest";
 import BrandStory from "../shared/Footer/BrandStory";
 import HelpCenter from "../Page/HelpCenter/HelpCenter";
+import Career from "../shared/Footer/Career";
+import BusinessEntityRecord from "../shared/Footer/BusinessEntityRecord";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +48,14 @@ const router = createBrowserRouter([
       {
         path:"/brand-story",
         element:<BrandStory></BrandStory>
+      },
+      {
+        path:"/career",
+        element:<Career></Career>
+      },
+      {
+        path:"/business-entity-record",
+        element:<BusinessEntityRecord></BusinessEntityRecord>
       },
     ],
     errorElement: <Error />,

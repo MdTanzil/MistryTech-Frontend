@@ -55,12 +55,24 @@ const Footer = () => {
           <Link to={"/brand-story"}>
             <p className="link link-hover">Brand Story</p>
           </Link>
-          <a className="link link-hover">Contact Us</a>
-          <a className="link link-hover">Careers</a>
-          <a className="link link-hover">Business Entity Record</a>
-          <a className="link link-hover">#MistrytechHappyPhoto</a>
-          <a className="link link-hover">Social Media Posts</a>
-          <a className="link link-hover">Apply for Franchise</a>
+          <Link to={"/contact-us"}>
+            <p className="link link-hover">Contact Us</p>
+          </Link>
+          <Link to={"/career"}>
+            <p className="link link-hover">Careers</p>
+          </Link>
+          <Link to={"/business-entity-record"}>
+            <p className="link link-hover">Business Entity Record</p>
+          </Link>
+          <Link>
+            <p className="link link-hover">#MistrytechHappyPhoto</p>
+          </Link>
+          <Link>
+            <p className="link link-hover">Social Media Posts</p>
+          </Link>
+          <Link>
+            <p className="link link-hover">Apply for Franchise</p>
+          </Link>
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Services</h6>
