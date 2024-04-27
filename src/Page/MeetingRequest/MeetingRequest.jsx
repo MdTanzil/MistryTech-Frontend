@@ -5,7 +5,7 @@ const MeetingRequest = () => {
     <div className="container mx-auto mt-10 mb-10 px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="md:order-2">
-          <img src={Img} alt="" className="w-full" />
+          <img src={Img} alt="" className="w-full h-[400px]" />
         </div>
         <div className="text-center md:text-left">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">

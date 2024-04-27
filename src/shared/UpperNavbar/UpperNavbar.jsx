@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { AiOutlineShopping } from "react-icons/ai";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -11,6 +11,14 @@ const UpperNavbar = () => {
   const { user } = useContext(AuthContext);
   const { isMobileView } = useContext(SearchContext);
   const placeholder = isMobileView ? "Search" : "Search Product";
+  const [filter, setFilter] = useState(false);
+
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  
+  const toggleDrawer = () => {
+    setDrawerOpen((prev) => !prev);
+  };
 
   return (
     <>
@@ -79,9 +87,57 @@ const UpperNavbar = () => {
                 <AvatarDropDown />
               )}
 
-              <Link className=" lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black  ">
-                <AiOutlineShopping />
-              </Link>
+              <div
+                className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black cursor-pointer"
+                onClick={toggleDrawer}
+              >
+                <div className={`drawer drawer-end${drawerOpen ? "open" : ""}`}>
+                  <input
+                    id="my-drawer"
+                    type="checkbox"
+                    className="drawer-toggle"
+                  />
+                  <div className="drawer-content">
+                    {/* Page content here */}
+                    <label htmlFor="my-drawer" className=" ">
+                      <div
+                        className="flex items-center gap-1"
+                        onMouseEnter={() => setFilter(true)}
+                      >
+                        <AiOutlineShopping></AiOutlineShopping>
+                      </div>
+                    </label>
+                  </div>
+                  <div className="drawer-side ">
+                    <label
+                      htmlFor="my-drawer"
+                      aria-label="close sidebar"
+                      className="drawer-overlay"
+                    ></label>
+                    <ul className="menu p-4 mt-28 w-80 min-h-full bg-base-200 text-base-content">
+                      {/* Sidebar content here */}
+                      <li>
+                        <a>Sidebar Item 1</a>
+                      </li>
+                      <li>
+                        <a>Sidebar Item 2</a>
+                      </li>
+                      <li>
+                        <a>Sidebar Item 2</a>
+                      </li>
+                      <li>
+                        <a>Sidebar Item 2</a>
+                      </li>
+                      <li>
+                        <a>Sidebar Item 2</a>
+                      </li>
+                      <li>
+                        <a>Sidebar Item 2</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

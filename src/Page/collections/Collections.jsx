@@ -1,11 +1,14 @@
 import Img from "../../assets/images/collections-hero.jpg";
 import Table from "../../assets/images/table.jpg";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 import { useEffect, useRef, useState } from "react";
 const Collections = () => {
   const [open, setOpen] = useState(false);
   const dropDownRef = useRef(null);
   const items = ["React", "Angular", "Vue"];
+  const [filter, setFilter] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
 
   useEffect(() => {
     const close = (e) => {
@@ -37,11 +40,14 @@ const Collections = () => {
             <input id="my-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content">
               {/* Page content here */}
-              <label
-                htmlFor="my-drawer"
-                className="btn btn-primary drawer-button"
-              >
-                Open drawer
+              <label htmlFor="my-drawer" className=" ">
+                <div
+                  className="flex items-center gap-1"
+                  onMouseEnter={() => setFilter(true)}
+                >
+                  Filter
+                  {filter ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
+                </div>
               </label>
             </div>
             <div className="drawer-side z-10">
@@ -76,20 +82,23 @@ const Collections = () => {
         </div>
         <div
           ref={dropDownRef}
-          className="relative mx-auto text-white pr-[9px]  md:pr-[996px] md:pl-[00px] pl-[10px]"
+          className="relative mx-auto pr-[9px]  md:pr-[996px] md:pl-[00px] pl-[10px]"
         >
-          <button
-            onClick={() => setOpen((prev) => !prev)}
-            className="rounded-sm bg-sky-600 px-6 py-2"
-          >
-            Dropdown
+          <button onClick={() => setOpen((prev) => !prev)} className="">
+            <div
+              className="flex items-center gap-1"
+              onClick={() => setDropDown((prevDropDown) => !prevDropDown)}
+            >
+              Featured
+              {dropDown ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
+            </div>
           </button>
           <ul
             className={`${
               open
                 ? "visible translate-y-0 duration-300"
                 : "invisible translate-y-4"
-            } absolute top-12 z-50 w-28 space-y-1 rounded-sm bg-sky-400 shadow-md`}
+            } absolute top-12 z-50 w-28 space-y-1 rounded-sm bg-white shadow-md`}
           >
             {items.map((item, idx) => (
               <li
@@ -109,7 +118,7 @@ const Collections = () => {
         <div className="card  rounded-none relative flex justify-center items-center">
           <img src={Table} alt="Shoes" className="h-72" />
           <div className="absolute inset-0 flex items-center justify-center text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <button className="cursor-pointer bg-white text-black hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
+            <button className="cursor-pointer bg-secondary text-white hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
               Select Option
             </button>
           </div>
@@ -124,7 +133,7 @@ const Collections = () => {
         <div className="card  rounded-none relative flex justify-center items-center">
           <img src={Table} alt="Shoes" className="h-72" />
           <div className="absolute inset-0 flex items-center justify-center text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <button className="cursor-pointer bg-white text-black hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
+            <button className="cursor-pointer bg-secondary text-white hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
               Select Option
             </button>
           </div>
@@ -139,7 +148,7 @@ const Collections = () => {
         <div className="card  rounded-none relative flex justify-center items-center">
           <img src={Table} alt="Shoes" className="h-72" />
           <div className="absolute inset-0 flex items-center justify-center text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <button className="cursor-pointer bg-white text-black hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
+            <button className="cursor-pointer bg-secondary text-white hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
               Select Option
             </button>
           </div>
@@ -154,7 +163,7 @@ const Collections = () => {
         <div className="card  rounded-none relative flex justify-center items-center">
           <img src={Table} alt="Shoes" className="h-72" />
           <div className="absolute inset-0 flex items-center justify-center text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <button className="cursor-pointer bg-white text-black hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
+            <button className="cursor-pointer bg-secondary text-white hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
               Select Option
             </button>
           </div>
@@ -169,7 +178,7 @@ const Collections = () => {
         <div className="card  rounded-none relative flex justify-center items-center">
           <img src={Table} alt="Shoes" className="h-72" />
           <div className="absolute inset-0 flex items-center justify-center text-center opacity-0 transition-opacity duration-300 hover:opacity-100">
-            <button className="cursor-pointer bg-white text-black hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
+            <button className="cursor-pointer bg-secondary text-white hover:text-white hover:bg-primary text-center py-2 px-12 mt-24">
               Select Option
             </button>
           </div>
