@@ -76,23 +76,23 @@ const Footer = () => {
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Services</h6>
-          <a className="link link-hover">Servicing Request</a>
-          <a className="link link-hover">Meeting Request</a>
-          <a className="link link-hover">Shipping Policy</a>
-          <a className="link link-hover">Exchange & Refund</a>
-          <a className="link link-hover">Terms & Condition</a>
-          <a className="link link-hover">Privacy Policy</a>
+          <Link> <p className="link link-hover">Servicing Request</p></Link>
+          <Link> <p className="link link-hover">Meeting Request</p></Link>
+          <Link> <p className="link link-hover">Shipping Policy</p></Link>
+          <Link> <p className="link link-hover">Exchange & Refund</p></Link>
+          <Link> <p className="link link-hover">Terms & Condition</p></Link>
+          <Link> <p className="link link-hover">Privacy Policy</p></Link>
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Information</h6>
-          <a className="link link-hover">Available Colors List</a>
-          <a className="link link-hover">Home Furniture Catalogue</a>
-          <a className="link link-hover">Office Furniture Catalogue</a>
-          <a className="link link-hover">Academic Furniture Catalogue</a>
-          <a className="link link-hover">Store Locator</a>
-          <a className="link link-hover">Care & Maintenance</a>
-          <a className="link link-hover">Customization</a>
-          <a className="link link-hover">FAQs</a>
+          <Link> <p className="link link-hover">Available Colors List</p></Link>
+          <Link> <p className="link link-hover">Home Furniture Catalogue</p></Link>
+          <Link> <p className="link link-hover">Office Furniture Catalogue</p></Link>
+          <Link> <p className="link link-hover">Academic Furniture Catalogue</p></Link>
+          <Link> <p className="link link-hover">Store Locator</p></Link>
+          <Link> <p className="link link-hover">Care & Maintenance</p></Link>
+          <Link> <p className="link link-hover">Customization</p></Link>
+          <Link> <p className="link link-hover">FAQs</p></Link>
         </nav>
       </footer>
     </div>
