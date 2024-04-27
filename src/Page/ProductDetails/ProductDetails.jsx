@@ -34,7 +34,7 @@ const ProductDetails = () => {
           <h1 className="text-3xl font-bold text-gray-800">
             Easy Table | TV2-005
           </h1>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 mt-4 text-xl">
             Tk 6,990.00{" "}
             <span className="line-through text-slate-400">TK 7,500.00</span>
           </p>
@@ -44,11 +44,11 @@ const ProductDetails = () => {
               Base-White, Top-Black
             </span>{" "}
           </p>
-          <div className="gap-4 mt-3">
-            <button className="border-solid  hover:border-2 py-1 px-2 border-black ">
+          <div className="mt-3">
+            <button className=" bg-secondary hover:bg-primary py-2 px-2 text-white  ">
               Base-Black, Top- White
             </button>
-            <button className="border-solid border-2 hover:border-2 py-1 px-2 border-black">
+            <button className="bg-primary hover:bg-secondary py-2 px-2 text-white ml-2">
               Base-Black, Top- White
             </button>
           </div>
@@ -58,11 +58,11 @@ const ProductDetails = () => {
               47(L)X23(W)X30(H)
             </span>{" "}
           </p>
-          <div className="gap-4 mt-3">
-            <button className="border-solid border-2  hover:border-2 py-1 px-2 border-black ">
+          <div className=" mt-3">
+            <button className="bg-primary hover:bg-secondary py-2 px-2 text-white ">
               Base-Black, Top- White
             </button>
-            <button className="border-solid  hover:border-2 py-1 px-2 border-black">
+            <button className="bg-secondary hover:bg-primary py-2 px-2 text-white ml-2">
               Base-Black, Top- White
             </button>
           </div>
@@ -92,13 +92,13 @@ const ProductDetails = () => {
           <div className="gap-4 mt-3">
             <button
               onClick={handleAddToCart}
-              className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md shadow-md"
+              className="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-md shadow-md"
             >
               Add to Cart
             </button>
             <button
               onClick={handleBuyNow}
-              className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md shadow-md ml-4"
+              className="bg-secondary hover:bg-primary text-white py-2 px-4 rounded-md shadow-md ml-4"
             >
               Buy Now
             </button>

@@ -1,16 +1,17 @@
-import icon from '../../assets/images/Mistrytech furniture logo white svg.2-01.svg'
+import { Link } from "react-router-dom";
+import icon from "../../assets/images/Mistrytech furniture logo white svg.2-01.svg";
 const Footer = () => {
   return (
     <div>
       <footer className="footer p-10 bg-zinc-900 text-base-content">
         <aside>
-         <img src={icon} alt="" className='h-36  ' />
+          <img src={icon} alt="" className="h-36  " />
           <p className="text-white">
-            Help Line: +8801897711118
+            Hotline: +8801999099009
             <br />
-            Messanger: m.me/fitmentcraft
+            Messenger: m.me/mistrytach
             <br />
-            Email: info@fitmentcraft.com
+            Email: mtl19.bd@gmail.com
           </p>
           <p className="text-white">Keep in touch with us</p>
           <div className="grid grid-flow-col gap-4 text-white">
@@ -51,33 +52,47 @@ const Footer = () => {
         </aside>
         <nav className="text-white">
           <h6 className="uppercase 2xl">About Us</h6>
-          <a className="link link-hover">Brand Story</a>
-          <a className="link link-hover">Contact Us</a>
-          <a className="link link-hover">Careers</a>
-          <a className="link link-hover">Business Entity Record</a>
-          <a className="link link-hover">#MistrytechHappyPhoto</a>
-          <a className="link link-hover">Social Media Posts</a>
-          <a className="link link-hover">Apply for Franchise</a>
+          <Link to={"/brand-story"}>
+            <p className="link link-hover">Brand Story</p>
+          </Link>
+          <Link to={"/contact-us"}>
+            <p className="link link-hover">Contact Us</p>
+          </Link>
+          <Link to={"/career"}>
+            <p className="link link-hover">Careers</p>
+          </Link>
+          <Link to={"/business-entity-record"}>
+            <p className="link link-hover">Business Entity Record</p>
+          </Link>
+          <Link>
+            <p className="link link-hover">#MistrytechHappyPhoto</p>
+          </Link>
+          <Link>
+            <p className="link link-hover">Social Media Posts</p>
+          </Link>
+          <Link>
+            <p className="link link-hover">Apply for Franchise</p>
+          </Link>
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Services</h6>
-          <a className="link link-hover">Servicing Request</a>
-          <a className="link link-hover">Meeting Request</a>
-          <a className="link link-hover">Shipping Policy</a>
-          <a className="link link-hover">Exchange & Refund</a>
-          <a className="link link-hover">Terms & Condition</a>
-          <a className="link link-hover">Privacy Policy</a>
+          <Link> <p className="link link-hover">Servicing Request</p></Link>
+          <Link> <p className="link link-hover">Meeting Request</p></Link>
+          <Link> <p className="link link-hover">Shipping Policy</p></Link>
+          <Link> <p className="link link-hover">Exchange & Refund</p></Link>
+          <Link> <p className="link link-hover">Terms & Condition</p></Link>
+          <Link> <p className="link link-hover">Privacy Policy</p></Link>
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Information</h6>
-          <a className="link link-hover">Available Colors List</a>
-          <a className="link link-hover">Home Furniture Catalogue</a>
-          <a className="link link-hover">Office Furniture Catalogue</a>
-          <a className="link link-hover">Academic Furniture Catalogue</a>
-          <a className="link link-hover">Store Locator</a>
-          <a className="link link-hover">Care & Maintenance</a>
-          <a className="link link-hover">Customization</a>
-          <a className="link link-hover">FAQs</a>
+          <Link> <p className="link link-hover">Available Colors List</p></Link>
+          <Link> <p className="link link-hover">Home Furniture Catalogue</p></Link>
+          <Link> <p className="link link-hover">Office Furniture Catalogue</p></Link>
+          <Link> <p className="link link-hover">Academic Furniture Catalogue</p></Link>
+          <Link> <p className="link link-hover">Store Locator</p></Link>
+          <Link> <p className="link link-hover">Care & Maintenance</p></Link>
+          <Link> <p className="link link-hover">Customization</p></Link>
+          <Link> <p className="link link-hover">FAQs</p></Link>
         </nav>
       </footer>
     </div>
