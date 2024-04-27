@@ -9,7 +9,7 @@ const Footer = () => {
           <p className="text-white">
             Hotline: +8801999099009
             <br />
-            Messenger: m.me/fitmentcraft
+            Messenger: m.me/mistrytach
             <br />
             Email: mtl19.bd@gmail.com
           </p>
