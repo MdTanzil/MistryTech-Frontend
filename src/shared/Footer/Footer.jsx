@@ -64,7 +64,7 @@ const Footer = () => {
           <Link to={"/business-entity-record"}>
             <p className="link link-hover">Business Entity Record</p>
           </Link>
-          <Link>
+          <Link to={"/mistrytech-happy-photo"}>
             <p className="link link-hover">#MistrytechHappyPhoto</p>
           </Link>
           <Link>
@@ -76,23 +76,65 @@ const Footer = () => {
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Services</h6>
-          <Link> <p className="link link-hover">Servicing Request</p></Link>
-          <Link> <p className="link link-hover">Meeting Request</p></Link>
-          <Link> <p className="link link-hover">Shipping Policy</p></Link>
-          <Link> <p className="link link-hover">Exchange & Refund</p></Link>
-          <Link> <p className="link link-hover">Terms & Condition</p></Link>
-          <Link> <p className="link link-hover">Privacy Policy</p></Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Servicing Request</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Meeting Request</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Shipping Policy</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Exchange & Refund</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Terms & Condition</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Privacy Policy</p>
+          </Link>
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Information</h6>
-          <Link> <p className="link link-hover">Available Colors List</p></Link>
-          <Link> <p className="link link-hover">Home Furniture Catalogue</p></Link>
-          <Link> <p className="link link-hover">Office Furniture Catalogue</p></Link>
-          <Link> <p className="link link-hover">Academic Furniture Catalogue</p></Link>
-          <Link> <p className="link link-hover">Store Locator</p></Link>
-          <Link> <p className="link link-hover">Care & Maintenance</p></Link>
-          <Link> <p className="link link-hover">Customization</p></Link>
-          <Link> <p className="link link-hover">FAQs</p></Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Available Colors List</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Home Furniture Catalogue</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Office Furniture Catalogue</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Academic Furniture Catalogue</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Store Locator</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Care & Maintenance</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">Customization</p>
+          </Link>
+          <Link>
+            {" "}
+            <p className="link link-hover">FAQs</p>
+          </Link>
         </nav>
       </footer>
     </div>

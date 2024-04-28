@@ -14,6 +14,7 @@ import BrandStory from "../shared/Footer/BrandStory";
 import HelpCenter from "../Page/HelpCenter/HelpCenter";
 import Career from "../shared/Footer/Career";
 import BusinessEntityRecord from "../shared/Footer/BusinessEntityRecord";
+import MistrytechHappyPhoto from "../shared/Footer/MistrytechHappyPhoto";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path:"/business-entity-record",
         element:<BusinessEntityRecord></BusinessEntityRecord>
+      },
+      {
+        path:"mistrytech-happy-photo",
+        element:<MistrytechHappyPhoto></MistrytechHappyPhoto>
       },
     ],
     errorElement: <Error />,
