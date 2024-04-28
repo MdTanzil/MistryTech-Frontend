@@ -1,6 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
+import CartPage from "../Page/CartPage";
+import ContactUs from "../Page/ContactUs";
 import Error from "../Page/Error";
+import HelpCenter from "../Page/HelpCenter/HelpCenter";
 import Login from "../Page/Login";
+import MeetingRequest from "../Page/MeetingRequest/MeetingRequest";
 import ProductDetails from "../Page/ProductDetails/ProductDetails";
 import AdminHome from "../Page/admin/AdminHome";
 import Collections from "../Page/collections/Collections";
@@ -8,14 +12,10 @@ import Home from "../componentes/Home/Home/Home";
 import Admin from "../layout/Admin";
 import Main from "../layout/Main";
 import AuthProvider from "../provider/AuthProvider";
-import ContactUs from "../Page/ContactUs";
-import MeetingRequest from "../Page/MeetingRequest/MeetingRequest";
 import BrandStory from "../shared/Footer/BrandStory";
-import HelpCenter from "../Page/HelpCenter/HelpCenter";
-import Career from "../shared/Footer/Career";
 import BusinessEntityRecord from "../shared/Footer/BusinessEntityRecord";
+import Career from "../shared/Footer/Career";
 import MistrytechHappyPhoto from "../shared/Footer/MistrytechHappyPhoto";
-import CartPage from "../Page/CartPage";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +34,6 @@ const router = createBrowserRouter([
         path: "/product-details",
         element: <ProductDetails></ProductDetails>,
       },
-      ,
       {
         path: "/cart",
         element: <CartPage></CartPage>,
