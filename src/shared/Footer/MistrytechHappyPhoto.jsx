@@ -4,7 +4,7 @@ const MistrytechHappyPhoto = () => {
   return (
     <div className="mb-14">
       <h2 className="text-4xl text-center font-bold mt-12 mb-14">
-        #MistryTechHappyPhoto
+        MistryTechHappyPhoto
       </h2>
       <div>
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
