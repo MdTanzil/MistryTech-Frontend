@@ -15,6 +15,7 @@ import HelpCenter from "../Page/HelpCenter/HelpCenter";
 import Career from "../shared/Footer/Career";
 import BusinessEntityRecord from "../shared/Footer/BusinessEntityRecord";
 import MistrytechHappyPhoto from "../shared/Footer/MistrytechHappyPhoto";
+import SocialMediaPost from "../shared/Footer/SocialMediaPost";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
       {
         path:"mistrytech-happy-photo",
         element:<MistrytechHappyPhoto></MistrytechHappyPhoto>
+      },
+      {
+        path:"/social-media-post",
+        element:<SocialMediaPost></SocialMediaPost>
       },
     ],
     errorElement: <Error />,

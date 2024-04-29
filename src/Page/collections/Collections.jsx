@@ -43,14 +43,14 @@ const Collections = () => {
               <label htmlFor="my-drawer" className=" ">
                 <div
                   className="flex items-center gap-1"
-                  onMouseEnter={() => setFilter(true)}
+                  onClick={() => setFilter(true)}
                 >
                   Filter
                   {filter ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
                 </div>
               </label>
             </div>
-            <div className="drawer-side z-10">
+            <div className="drawer-side ">
               <label
                 htmlFor="my-drawer"
                 aria-label="close sidebar"

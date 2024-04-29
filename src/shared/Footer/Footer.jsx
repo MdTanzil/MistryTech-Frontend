@@ -67,7 +67,7 @@ const Footer = () => {
           <Link to={"/mistrytech-happy-photo"}>
             <p className="link link-hover">#MistrytechHappyPhoto</p>
           </Link>
-          <Link>
+          <Link to={"/social-media-post"}>
             <p className="link link-hover">Social Media Posts</p>
           </Link>
           <Link>
