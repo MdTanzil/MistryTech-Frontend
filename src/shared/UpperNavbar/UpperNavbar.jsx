@@ -11,7 +11,7 @@ const UpperNavbar = () => {
   const { user } = useContext(AuthContext);
   const { isMobileView } = useContext(SearchContext);
   const placeholder = isMobileView ? "Search" : "Search Product";
-  const [filter, setFilter] = useState(false);
+  const [filter1, setFilter1] = useState(false);
 
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -91,7 +91,7 @@ const UpperNavbar = () => {
                 className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black cursor-pointer"
                 onClick={toggleDrawer}
               >
-                <div className={`drawer drawer-end${drawerOpen ? "open" : ""}`}>
+                <div className={`drawer drawer-end${drawerOpen ? "" : ""}`}>
                   <input
                     id="my-drawer"
                     type="checkbox"
@@ -102,7 +102,7 @@ const UpperNavbar = () => {
                     <label htmlFor="my-drawer" className=" ">
                       <div
                         className="flex items-center gap-1"
-                        onMouseEnter={() => setFilter(true)}
+                        onMouseEnter={() => setFilter1(true)}
                       >
                         <AiOutlineShopping></AiOutlineShopping>
                       </div>
@@ -114,27 +114,12 @@ const UpperNavbar = () => {
                       aria-label="close sidebar"
                       className="drawer-overlay"
                     ></label>
-                    <ul className="menu p-4 mt-28 w-80 min-h-full bg-base-200 text-base-content">
-                      {/* Sidebar content here */}
-                      <li>
-                        <a>Sidebar Item 1</a>
-                      </li>
-                      <li>
-                        <a>Sidebar Item 2</a>
-                      </li>
-                      <li>
-                        <a>Sidebar Item 2</a>
-                      </li>
-                      <li>
-                        <a>Sidebar Item 2</a>
-                      </li>
-                      <li>
-                        <a>Sidebar Item 2</a>
-                      </li>
-                      <li>
-                        <a>Sidebar Item 2</a>
-                      </li>
-                    </ul>
+                    <div className="menu p-4 w-[470px] min-h-full bg-base-100 text-base-content">
+                      <p className="text-2xl font-semibold m-3">
+                        Shopping Cart
+                      </p>
+                      <p className="mt-2 ml-3 text-xl">Your cart is currently empty.</p>
+                    </div>
                   </div>
                 </div>
               </div>

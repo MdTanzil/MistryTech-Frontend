@@ -7,7 +7,7 @@ const Collections = () => {
   const [open, setOpen] = useState(false);
   const dropDownRef = useRef(null);
   const items = ["React", "Angular", "Vue"];
-  const [filter, setFilter] = useState(false);
+  const [filter2, setFilter2] = useState(false);
   const [dropDown, setDropDown] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Collections = () => {
           </h1>
         </div>
       </div>
-      <div className="flex justify-start mt-6 mx-auto max-w-[1250px]">
+      <div className="flex mt-6 mx-auto max-w-[1250px]">
         {/* Drawer */}
         <div className="">
           <div className="drawer">
@@ -43,10 +43,10 @@ const Collections = () => {
               <label htmlFor="my-drawer" className=" ">
                 <div
                   className="flex items-center gap-1"
-                  onClick={() => setFilter(true)}
+                  onClick={() => setFilter2(true)}
                 >
                   Filter
-                  {filter ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
+                  {filter2 ? <MdKeyboardArrowDown /> : <MdKeyboardArrowUp />}
                 </div>
               </label>
             </div>
@@ -80,6 +80,9 @@ const Collections = () => {
             </div>
           </div>
         </div>
+
+
+
         <div
           ref={dropDownRef}
           className="relative mx-auto pr-[9px]  md:pr-[996px] md:pl-[00px] pl-[10px]"
