@@ -16,6 +16,8 @@ import Career from "../shared/Footer/Career";
 import BusinessEntityRecord from "../shared/Footer/BusinessEntityRecord";
 import MistrytechHappyPhoto from "../shared/Footer/MistrytechHappyPhoto";
 import SocialMediaPost from "../shared/Footer/SocialMediaPost";
+import ServicingRequest from "../shared/Footer/ServicingRequest";
+import ShippingPolicy from "../shared/Footer/ShippingPolicy";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +68,14 @@ const router = createBrowserRouter([
       {
         path:"/social-media-post",
         element:<SocialMediaPost></SocialMediaPost>
+      },
+      {
+        path:"/servicing-request",
+        element:<ServicingRequest></ServicingRequest>
+      },
+      {
+        path:"/shipping-policy",
+        element:<ShippingPolicy></ShippingPolicy>
       },
     ],
     errorElement: <Error />,

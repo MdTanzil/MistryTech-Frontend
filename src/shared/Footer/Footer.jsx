@@ -70,21 +70,21 @@ const Footer = () => {
           <Link to={"/social-media-post"}>
             <p className="link link-hover">Social Media Posts</p>
           </Link>
-          <Link>
+          <Link to={"/contact-us"}>
             <p className="link link-hover">Apply for Franchise</p>
           </Link>
         </nav>
         <nav className="text-white">
           <h6 className="uppercase 2xl">Services</h6>
-          <Link>
+          <Link to={"/servicing-request"}>
             {" "}
             <p className="link link-hover">Servicing Request</p>
           </Link>
-          <Link>
+          <Link to={"/meeting-request"}>
             {" "}
             <p className="link link-hover">Meeting Request</p>
           </Link>
-          <Link>
+          <Link to={"/shipping-policy"}>
             {" "}
             <p className="link link-hover">Shipping Policy</p>
           </Link>
