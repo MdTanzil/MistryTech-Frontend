@@ -1,4 +1,4 @@
-import { useContext, useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import { AiOutlineShopping } from "react-icons/ai";
 import { FaRegUser } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -11,6 +11,7 @@ const UpperNavbar = () => {
   const { user } = useContext(AuthContext);
   const { isMobileView } = useContext(SearchContext);
   const placeholder = isMobileView ? "Search" : "Search Product";
+
   const [filter1, setFilter1] = useState(false);
 
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -19,6 +20,7 @@ const UpperNavbar = () => {
   const toggleDrawer = () => {
     setDrawerOpen((prev) => !prev);
   };
+
 
   return (
     <>
@@ -63,7 +65,7 @@ const UpperNavbar = () => {
                 </li>
               </Link>
               <Link to="/contact-us">
-                <li className="group flex  cursor-pointer flex-col text-sm   font-medium">
+                <li className="group flex  cursor-pointer flex-col    font-medium">
                   Contact Us{" "}
                   <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
                 </li>
@@ -86,6 +88,7 @@ const UpperNavbar = () => {
               ) : (
                 <AvatarDropDown />
               )}
+
 
               <div
                 className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black "
@@ -122,6 +125,12 @@ const UpperNavbar = () => {
                     </div>
                   </div>
                 </div>
+
+              <div className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black cursor-pointer">
+                <Link to={"/cart"}>
+                  <AiOutlineShopping></AiOutlineShopping>
+                </Link>
+
               </div>
             </div>
           </div>

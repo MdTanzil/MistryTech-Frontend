@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import AdminSidebar from "../componentes/admin/AdminSidebar";
-
 const Admin = () => {
   return (
     <div className="grid grid-cols-12 gap-2 container mx-auto">

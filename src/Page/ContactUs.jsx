@@ -1,4 +1,3 @@
-import { TextareaAutosize } from "@mui/base/TextareaAutosize";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
@@ -20,8 +19,10 @@ const ContactUs = () => {
     <div className="container mx-auto my-10">
       <Typography
         variant="h5"
-        className="text-center barlow font-bold"
+        className="text-center barlow  text-5xl"
         color="black"
+        gutterBottom
+        sx={{fontWeight:500,fontSize:30}}
       >
         {" "}
         Contact us{" "}
@@ -45,37 +46,50 @@ const ContactUs = () => {
                   id="name"
                   label="Name"
                   className="border-none outline-none w-1/2"
-                  variant="filled"
+                  variant="outlined"
                   sx={{ mr: 2 }}
                   name="name"
+                  required
                 />
                 <TextField
                   id="email"
                   label="Email"
                   className="border-none outline-none w-1/2"
-                  variant="filled"
+                  variant="outlined"
+                  name="email"
+                  required
                 />
               </Box>
             </div>
             <div className="mt-5">
               <MuiTelInput
-                fullWidth
+                sx={{
+                  width: "50%",
+                }}
                 value={value}
                 label="Phone Number"
                 onChange={handleChange}
+                defaultCountry="BD"
                 placeholder="017....."
+                forceCallingCode
+                required
+                variant="outlined"
+                className="pr-4"
               />
             </div>
             <div className="mt-5">
-              <TextareaAutosize
+              <TextField
                 aria-label="minimum height"
                 minRows={8}
                 placeholder="Message"
                 className="w-full p-2"
                 sx={{
-                  border: "2px solid black", // Add border
+                  // Add border
                   borderRadius: "4px", // Optional: Add border radius for rounded corners
                 }}
+                multiline
+                required
+                variant="outlined"
               />
             </div>
             <div className="flex items-center my-4">

@@ -6,7 +6,7 @@ import {
   IoLogOutOutline,
   IoPersonCircleOutline,
 } from "react-icons/io5";
-import logo from "../../assets/images/Mistrytech furniture logo png-01.png";
+import logo from "../../assets/images/Mistrytech furniture logo white svg.2-01.svg";
 const AdminSidebar = () => {
   return (
     <div>
@@ -14,9 +14,9 @@ const AdminSidebar = () => {
 
 
       <div className="min-h-screen flex flex-row ">
-        <div className="flex flex-col  bg-primary rounded-r-xl overflow-hidden">
+        <div className="flex flex-col  bg-secondary rounded-r-xl overflow-hidden">
           <div className="flex items-center justify-center h-28 shadow-md">
-            <img src={logo} alt="" />{" "}
+            <img src={logo} className="min-w-60" alt="" />{" "}
           </div>
           <ul className="flex flex-col py-4">
             <li>
