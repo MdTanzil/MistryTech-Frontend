@@ -88,10 +88,10 @@ const UpperNavbar = () => {
               )}
 
               <div
-                className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black cursor-pointer"
+                className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black "
                 onClick={toggleDrawer}
               >
-                <div className={`drawer drawer-end${drawerOpen ? "" : ""}`}>
+                <div className={`drawer drawer-end${drawerOpen ? "" : ""} z-30`}>
                   <input
                     id="my-drawer"
                     type="checkbox"
