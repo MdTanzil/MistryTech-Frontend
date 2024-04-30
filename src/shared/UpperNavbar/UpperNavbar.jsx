@@ -12,16 +12,6 @@ const UpperNavbar = () => {
   const { isMobileView } = useContext(SearchContext);
   const placeholder = isMobileView ? "Search" : "Search Product";
 
-  const [filter1, setFilter1] = useState(false);
-
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  
-  const toggleDrawer = () => {
-    setDrawerOpen((prev) => !prev);
-  };
-
-
   return (
     <>
       <nav className="  mx-auto min-w-full flex items-center justify-center px-4 py-2   bg-white  ">
@@ -89,48 +79,12 @@ const UpperNavbar = () => {
                 <AvatarDropDown />
               )}
 
-
-              <div
-                className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black "
-                onClick={toggleDrawer}
-              >
-                <div className={`drawer drawer-end${drawerOpen ? "" : ""} z-30`}>
-                  <input
-                    id="my-drawer"
-                    type="checkbox"
-                    className="drawer-toggle"
-                  />
-                  <div className="drawer-content">
-                    {/* Page content here */}
-                    <label htmlFor="my-drawer" className=" ">
-                      <div
-                        className="flex items-center gap-1"
-                        onMouseEnter={() => setFilter1(true)}
-                      >
-                        <AiOutlineShopping></AiOutlineShopping>
-                      </div>
-                    </label>
-                  </div>
-                  <div className="drawer-side ">
-                    <label
-                      htmlFor="my-drawer"
-                      aria-label="close sidebar"
-                      className="drawer-overlay"
-                    ></label>
-                    <div className="menu p-4 w-[470px] min-h-full bg-base-100 text-base-content">
-                      <p className="text-2xl font-semibold m-3">
-                        Shopping Cart
-                      </p>
-                      <p className="mt-2 ml-3 text-xl">Your cart is currently empty.</p>
-                    </div>
-                  </div>
+              <div className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black ">
+                <div className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black cursor-pointer">
+                  <Link to={"/cart"}>
+                    <AiOutlineShopping></AiOutlineShopping>
+                  </Link>
                 </div>
-
-              <div className="lg:px-2 lg:py-2 px-1 py-1 text-2xl mr-4 lg:mr-4 text-black cursor-pointer">
-                <Link to={"/cart"}>
-                  <AiOutlineShopping></AiOutlineShopping>
-                </Link>
-
               </div>
             </div>
           </div>
