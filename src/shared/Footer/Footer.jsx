@@ -88,7 +88,7 @@ const Footer = () => {
             {" "}
             <p className="link link-hover">Shipping Policy</p>
           </Link>
-          <Link>
+          <Link to={"/exchange-refund"}>
             {" "}
             <p className="link link-hover">Exchange & Refund</p>
           </Link>

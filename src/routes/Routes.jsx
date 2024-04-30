@@ -18,6 +18,7 @@ import MistrytechHappyPhoto from "../shared/Footer/MistrytechHappyPhoto";
 import SocialMediaPost from "../shared/Footer/SocialMediaPost";
 import ServicingRequest from "../shared/Footer/ServicingRequest";
 import ShippingPolicy from "../shared/Footer/ShippingPolicy";
+import ExchangeRefund from "../shared/Footer/ExchangeRefund";
 
 const router = createBrowserRouter([
   {
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
       {
         path:"/shipping-policy",
         element:<ShippingPolicy></ShippingPolicy>
+      },
+      {
+        path:"/exchange-refund",
+        element:<ExchangeRefund></ExchangeRefund>
       },
     ],
     errorElement: <Error />,
