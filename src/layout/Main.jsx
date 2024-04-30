@@ -1,5 +1,6 @@
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { Outlet } from "react-router-dom";
+import ScrollToTop from "../Page/ScrollToTop";
 import Avatar from "../assets/images/Mistrytech furniture logo png-01.png";
 import AuthProvider from "../provider/AuthProvider";
 import SearchContextProvider from "../provider/SearchContextProvider";
@@ -26,6 +27,7 @@ const Main = () => {
             notificationDelay={5}
             statusMessage="Typically replies within 1 hour"
           />
+          <ScrollToTop />
 
           <Footer></Footer>
         </SearchContextProvider>
