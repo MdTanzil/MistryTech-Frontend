@@ -9,7 +9,7 @@ const ExchangeRefund = () => {
         <div className="ml-4 mr-4 md:ml-36 lg:ml-48 md:mr-36 lg:mr-48 ">
           <h4 className="text-xl font-medium mb-6">MistryTech Refund Policy</h4>
           <p className="mb-6 text-lg">
-            Thank you for shopping at Fitment Craft!
+            Thank you for shopping at MistryTech!
           </p>
           <p className="mb-6 text-lg">
             We offer a refund and/or exchange within the first 5 days of your

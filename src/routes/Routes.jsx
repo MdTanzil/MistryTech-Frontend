@@ -19,6 +19,7 @@ import SocialMediaPost from "../shared/Footer/SocialMediaPost";
 import ServicingRequest from "../shared/Footer/ServicingRequest";
 import ShippingPolicy from "../shared/Footer/ShippingPolicy";
 import ExchangeRefund from "../shared/Footer/ExchangeRefund";
+import TermsCondition from "../shared/Footer/TermsCondition";
 
 const router = createBrowserRouter([
   {
@@ -81,6 +82,10 @@ const router = createBrowserRouter([
       {
         path:"/exchange-refund",
         element:<ExchangeRefund></ExchangeRefund>
+      },
+      {
+        path:"/terms-condition",
+        element:<TermsCondition></TermsCondition>
       },
     ],
     errorElement: <Error />,
