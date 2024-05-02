@@ -12,3 +12,7 @@
 .barlow {
   font-family: "Barlow", sans-serif;
 }
+
+* {
+  transition: transform 0.3s ease; /* Change the duration and timing function as needed */
+}

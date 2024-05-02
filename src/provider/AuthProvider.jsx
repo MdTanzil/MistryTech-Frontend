@@ -11,11 +11,12 @@ import {
 import { useEffect, useState } from "react";
 import { AuthContext } from "../context";
 import { auth } from "../firebase";
+import { useAxiosPublic } from "../hooks";
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState("tanzil");
   const [loading, setLoading] = useState(true);
-
+  const axios = useAxiosPublic();
   // Account registrations Function
   const register = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -50,15 +51,24 @@ const AuthProvider = ({ children }) => {
         console.log(user);
         setUser(user);
         // ...
+        const userEmail = { email: user.email };
+        axios.post("/jwt", userEmail).then((res) => {
+          if (res.data.token) {
+            localStorage.setItem("access-token", res.data.token);
+            setLoading(false);
+          }
+        });
       } else {
         // User is signed out
         // ...
+        localStorage.removeItem("access-token");
         setUser(null);
         // console.log("no User");
       }
       setLoading(false);
     });
     return () => unsubscribe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   //Logout Function
