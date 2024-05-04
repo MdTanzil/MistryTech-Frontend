@@ -18,7 +18,7 @@ import Img13 from "../../../assets/logoImg/YRC.avif";
 const WhoTrustUs = () => {
   const gradientStyle = {
     background:
-      "linear-gradient(to right, #30CEC9, transparent 10%), linear-gradient(to left, #FBF7D9, transparent 10%)",
+      "linear-gradient(to right, #30CEC9 10%, transparent 60%), linear-gradient(to left, #FBF7D9 10%, transparent 60%)",
     padding: "5px", // Adjust padding as needed
     borderRadius: "5px", // Optional: Add border radius for rounded corners
   };
