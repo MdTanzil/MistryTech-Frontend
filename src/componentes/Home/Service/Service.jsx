@@ -8,7 +8,7 @@ const Service = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="flex flex-col items-center justify-center text-center">
           <img src={Returns} alt="" className="w-36 mx-auto" />
-          <h4 className="text-3xl font-medium">Returns & Warranty</h4>
+          <h4 className="text-3xl font-medium">Service Warranty</h4>
           <p className="text-lg">
             Buy with confidence! Our products come with a warranty and easy
             return policy.
@@ -23,12 +23,15 @@ const Service = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center text-center">
-          <img src={Customer} alt="" className="w-52 mt-[-30px] mb-[-90px] mx-auto" />
+          <img
+            src={Customer}
+            alt=""
+            className="w-52 mt-[-30px] mb-[-90px] mx-auto"
+          />
           <div className="mt-[53px]">
-            <h4 className="text-3xl font-medium">Customer Support</h4>
+            <h4 className="text-3xl font-medium">Customize Furniture</h4>
             <p className="text-lg">
-              Get help anytime! Our friendly customer support team is here for
-              you
+              We make furniture according to customer&apos;s own design
             </p>
           </div>
         </div>

@@ -80,7 +80,7 @@ const NavBar = () => {
               to="/commercial"
               className="block mt-4 lg:inline-block lg:mt-0 text-white    p-2      text-base hover:bg-white hover:text-gray-900 mr-4"
             >
-              <div className="flex items-center gap-1">
+              <div className="flex items-center  gap-1">
                 Office Furniture
                 {officeFurnitureDropdown ? (
                   <MdKeyboardArrowDown />
@@ -279,7 +279,6 @@ const NavBar = () => {
                         chair
                       </NavLink>
                     </div>
-          
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import Service from "../Service/Service";
 import Slider from "../Slider/Slider";
+import WhoTrustUs from "../WhoTrustUS/WhoTrustUs";
 import GarmentsFurniture from "./../GarmentsFurniture/GarmentsFurniture";
 import HomeFurniture from "./../HomeFurniture/HomeFurniture";
 import OfficeFurniture from "./../OfficeFurniture/OfficeFurniture";
@@ -18,6 +19,7 @@ const Home = () => {
       <SchoolFurniture></SchoolFurniture>/
       <RestaurantFurniture></RestaurantFurniture>
       <TermsConditions></TermsConditions>
+      <WhoTrustUs></WhoTrustUs>
     </>
   );
 };

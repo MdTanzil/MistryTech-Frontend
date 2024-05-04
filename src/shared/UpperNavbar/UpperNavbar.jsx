@@ -6,6 +6,9 @@ import Logo from "../../assets/images/Mistrytech furniture logo svg.svg";
 import { AuthContext, SearchContext } from "../../context";
 import AvatarDropDown from "../../profile/AvarterDropDown";
 
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+
 const UpperNavbar = () => {
   const inputRef = useRef(null);
   const { user } = useContext(AuthContext);
@@ -66,6 +69,24 @@ const UpperNavbar = () => {
                   <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
                 </li>
               </Link>
+              <Box
+                // className="hidden lg:block md:block sm:hidden"
+                sx={{ "& button": { m: 1 } }}
+              >
+                <div className="text-center ">
+                  <div>
+                    <div className="text-gray-500">Talk to an Expert</div>
+                    <div className="text-secondary">+8801999099009</div>
+                  </div>
+                  <Button
+                    variant="contained"
+                    className="text-nowrap"
+                    size="small"
+                  >
+                    Call for free estimate
+                  </Button>
+                </div>
+              </Box>
             </ul>
             <div className="flex  items-center justify-between gap-1 lg:gap-5">
               {!user ? (
