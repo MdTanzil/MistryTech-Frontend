@@ -69,8 +69,11 @@ const UpperNavbar = () => {
                   <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
                 </li>
               </Link>
-              <Box sx={{ "& button": { m: 1 } }}>
-                <div className="text-center">
+              <Box
+                // className="hidden lg:block md:block sm:hidden"
+                sx={{ "& button": { m: 1 } }}
+              >
+                <div className="text-center ">
                   <div>
                     <div className="text-gray-500">Talk to an Expert</div>
                     <div className="text-secondary">+8801999099009</div>
