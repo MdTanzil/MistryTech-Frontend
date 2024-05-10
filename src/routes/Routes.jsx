@@ -15,11 +15,11 @@ import AuthProvider from "../provider/AuthProvider";
 import BrandStory from "../shared/Footer/BrandStory";
 import BusinessEntityRecord from "../shared/Footer/BusinessEntityRecord";
 import Career from "../shared/Footer/Career";
+import ExchangeRefund from "../shared/Footer/ExchangeRefund";
 import MistrytechHappyPhoto from "../shared/Footer/MistrytechHappyPhoto";
-import SocialMediaPost from "../shared/Footer/SocialMediaPost";
 import ServicingRequest from "../shared/Footer/ServicingRequest";
 import ShippingPolicy from "../shared/Footer/ShippingPolicy";
-import ExchangeRefund from "../shared/Footer/ExchangeRefund";
+import SocialMediaPost from "../shared/Footer/SocialMediaPost";
 import TermsCondition from "../shared/Footer/TermsCondition";
 
 const router = createBrowserRouter([
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/collections",
+        path: "/collections/:slug",
         element: <Collections></Collections>,
       },
       {
@@ -73,24 +73,24 @@ const router = createBrowserRouter([
         element: <MistrytechHappyPhoto></MistrytechHappyPhoto>,
       },
       {
-        path:"/social-media-post",
-        element:<SocialMediaPost></SocialMediaPost>
+        path: "/social-media-post",
+        element: <SocialMediaPost></SocialMediaPost>,
       },
       {
-        path:"/servicing-request",
-        element:<ServicingRequest></ServicingRequest>
+        path: "/servicing-request",
+        element: <ServicingRequest></ServicingRequest>,
       },
       {
-        path:"/shipping-policy",
-        element:<ShippingPolicy></ShippingPolicy>
+        path: "/shipping-policy",
+        element: <ShippingPolicy></ShippingPolicy>,
       },
       {
-        path:"/exchange-refund",
-        element:<ExchangeRefund></ExchangeRefund>
+        path: "/exchange-refund",
+        element: <ExchangeRefund></ExchangeRefund>,
       },
       {
-        path:"/terms-condition",
-        element:<TermsCondition></TermsCondition>
+        path: "/terms-condition",
+        element: <TermsCondition></TermsCondition>,
       },
     ],
     errorElement: <Error />,
